@@ -156,7 +156,7 @@ main {
   margin: 2rem 0;      /* espacio arriba y abajo */
 }
 .intro-imagen img {
-  max-width: 50%;       /* ocupa solo la mitad del ancho del contenedor */
+  max-width: 35%;       /* ocupa solo la mitad del ancho del contenedor */
   height: auto;         /* mantiene proporción */
   border-radius: 8px;   /* esquinas suavizadas */
   box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra suave */
@@ -536,6 +536,7 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
 
 
 
