@@ -155,12 +155,13 @@ main {
   text-align: center;  /* centra la imagen */
   margin: 2rem 0;      /* espacio arriba y abajo */
 }
-
 .intro-imagen img {
-  max-width: 100%;     /* se adapta al ancho del contenedor */
-  height: auto;        /* mantiene proporción */
-  border-radius: 8px;  /* esquinas suavizadas */
+  max-width: 50%;       /* ocupa solo la mitad del ancho del contenedor */
+  height: auto;         /* mantiene proporción */
+  border-radius: 8px;   /* esquinas suavizadas */
   box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra suave */
+  display: block;       /* necesario para centrar */
+  margin: 2rem auto;    /* centra y separa de los párrafos */
 }
 
 /* ===============================
@@ -535,6 +536,7 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
 
 
 
