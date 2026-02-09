@@ -260,22 +260,32 @@ main {
 }
 
 /* ===============================
-   HERO PAPELERÍA
+   HERO GLOBAL
 ================================ */
-.hero-papeleria {
+.hero {
   position: relative;
   width: 100%;
   height: 75vh;
-  background: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg") center / cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.hero-papeleria::before {
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.25);
 }
-
+.hero-papeleria {
+  background-image: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg");
+}
+.hero-proceso {
+  background-image: url("../img/procesoArtesanal/1 HORIZONTAL.jpg");
+}
+.hero-mi-historia {
+  background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg");
+}
 /* ===============================
    LIGHTBOX
 ================================ */
@@ -406,21 +416,8 @@ footer {
 }
 
 /* ===============================
-   HERO PROCESO
+   HERO CONTENIDO
 ================================ */
-.hero-proceso {
-  position: relative;
-  width: 100%;
-  height: 75vh;
-  background: url("../img/procesoArtesanal/1 HORIZONTAL.jpg") center / cover;
-}
-
-.hero-proceso::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.25);
-}
 
 .hero-contenido {
   position: relative;
@@ -504,9 +501,6 @@ footer {
     margin-top: 10px;
   }
 
-  .hero-proceso {
-    height: 50vh;
-  }
 
   .hero-contenido h2 {
     font-size: 2.5rem;
@@ -520,6 +514,7 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
 
 
 
