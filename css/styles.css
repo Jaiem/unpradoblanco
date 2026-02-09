@@ -215,7 +215,7 @@ main {
 .subribbon-vertical .categoria.active {
   background-color: #d6c8b6;
   color: #222;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Descripción */
@@ -520,4 +520,5 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
 
