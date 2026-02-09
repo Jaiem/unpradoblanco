@@ -286,6 +286,12 @@ main {
 .hero-mi-historia {
   background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg");
 }
+.hero-home {
+  background-image: url("../img/home/CABECERA_HOME.jpg");
+}
+.hero-contacto {
+  background-image: url("../img/contacto/CABECERA_CONTACTO.jpg");
+}
 /* ===============================
    LIGHTBOX
 ================================ */
@@ -514,6 +520,7 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
 
 
 
