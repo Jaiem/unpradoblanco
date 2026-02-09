@@ -77,15 +77,33 @@
 
     <div class="papeleria-page">
 
-  <div class="subribbon-vertical">
-    
-    <button class="categoria" onclick="mostrarDescripcion('minutas', this)">Minutas</button>
-    <button class="categoria" onclick="mostrarDescripcion('meseros', this)">Meseros y Seating Plan</button>
-    <button class="categoria" onclick="mostrarDescripcion('marcasitios', this)">Marcasitios</button>
-    <button class="categoria" onclick="mostrarDescripcion('numeros', this)">Cartelería y Señalización</button>
-    <button class="categoria" onclick="mostrarDescripcion('regalos', this)">Regalos personalizados</button>
+<div class="subribbon-vertical">
+  <button id="btn-minutas" class="categoria"
+    onclick="mostrarDescripcion('minutas', this)">
+    Minutas
+  </button>
 
-  </div>
+  <button id="btn-meseros" class="categoria"
+    onclick="mostrarDescripcion('meseros', this)">
+    Meseros y Seating Plan
+  </button>
+
+  <button id="btn-marcasitios" class="categoria"
+    onclick="mostrarDescripcion('marcasitios', this)">
+    Marcasitios
+  </button>
+
+  <button id="btn-numeros" class="categoria"
+    onclick="mostrarDescripcion('numeros', this)">
+    Cartelería y Señalización
+  </button>
+
+  <button id="btn-regalos" class="categoria"
+    onclick="mostrarDescripcion('regalos', this)">
+    Regalos personalizados
+  </button>
+</div>
+
 
   <!-- Aquí aparecerá la descripción -->
   <div id="descripcion" class="descripcion"></div>
@@ -285,9 +303,14 @@ document.getElementById('lightbox')
       document.body.classList.remove('lightbox-activo');
     }
   });
+  window.addEventListener('DOMContentLoaded', () => {
+  const botonMinutas = document.getElementById('btn-minutas');
+  mostrarDescripcion('minutas', botonMinutas);
+});
 </script>
 
 </html>
+
 
 
 
