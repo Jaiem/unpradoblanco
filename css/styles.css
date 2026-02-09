@@ -292,6 +292,9 @@ main {
 .hero-contacto {
   background-image: url("../img/contacto/CABECERA_CONTACTO.jpg");
 }
+.hero-invitaciones {
+  background-image: url("../img/invitaciones/CABECERA_INVITACIONES.jpg");
+}
 /* ===============================
    LIGHTBOX
 ================================ */
@@ -520,6 +523,7 @@ footer {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
+
 
 
 
