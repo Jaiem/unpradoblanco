@@ -163,7 +163,30 @@ main {
   display: block;       /* necesario para centrar */
   margin: 2rem auto;    /* centra y separa de los párrafos */
 }
+.intro-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+}
 
+.intro-bloque .intro-imagen {
+  margin: 0;
+}
+
+.intro-bloque img {
+  max-width: 320px;
+}
+
+.intro-texto-lateral {
+  max-width: 420px;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #555;
+  line-height: 1.8;
+  text-align: left; /* clave para que se lea bien */
+}
 /* ===============================
    PROCESO
 ================================ */
@@ -535,7 +558,16 @@ footer {
   .galeria-proceso {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+   .intro-bloque {
+  flex-direction: column;
+  gap: 1.5rem;
 }
+
+.intro-texto-lateral {
+  text-align: center;
+}
+}
+
 
 
 
