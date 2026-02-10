@@ -420,7 +420,7 @@ footer {
   gap: 20px;
   max-width: 600px;
   padding: 20px;
-  margin: 60px auto; /* ↑↓ margen arriba y abajo | ←→ centrado */
+  margin: 40px auto; /* ↑↓ margen arriba y abajo | ←→ centrado */
 }
 
 .formulario-contacto input,
@@ -563,6 +563,7 @@ footer {
   text-align: center;
 }
 }
+
 
 
 
