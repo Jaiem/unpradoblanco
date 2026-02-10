@@ -420,8 +420,7 @@ footer {
   gap: 20px;
   max-width: 600px;
   padding: 20px;
-  margin-left: 0;
-  margin-right: auto;
+  margin: 0 auto;
   background-color: #f6f2ec;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -567,6 +566,7 @@ footer {
   text-align: center;
 }
 }
+
 
 
 
