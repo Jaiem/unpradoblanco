@@ -148,8 +148,8 @@ main {
   font-style: italic;
   max-width: 100%;
   margin-top: 10px;
-   margin-left:50px;
-   margin-right:50px;
+   margin-left:150px;
+   margin-right:150px;
   line-height: 1.8;
 }
 /* Imagen dentro de la intro */
@@ -567,6 +567,7 @@ footer {
   text-align: center;
 }
 }
+
 
 
 
