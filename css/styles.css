@@ -305,6 +305,8 @@ main {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 20px;
+
 }
 
 .hero::before {
@@ -563,6 +565,7 @@ footer {
   text-align: center;
 }
 }
+
 
 
 
