@@ -694,11 +694,10 @@ footer {
   text-align: left;
 }
 
-* HOME - imagen más grande */
-
-.inicio .intro-imagen img {
-  width: 380px;      /* aumenta tamaño */
-  max-width: 100%;   /* evita límites del 35% */
+/* HOME - imagen más grande */
+.inicio .intro-bloque .intro-imagen img {
+  width: 380px !important;  /* fuerza el tamaño */
+  max-width: 100%;
 }
 
 
