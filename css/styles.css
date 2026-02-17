@@ -582,9 +582,8 @@ footer {
   margin: 0;
 }
 
-/* Párrafos inicial y final */
-.historia .intro-inicial,
-.historia .intro-final {
+/* Párrafos inicial */
+.historia .intro-inicial{
   font-size: 1.2rem;
   font-style: italic;
   color: #555;
@@ -628,6 +627,21 @@ footer {
   line-height: 1.9;
   font-style: italic;
 }
+/* Bloque final centrado independiente */
+
+.historia .bloque-final {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.historia .bloque-final p {
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.9;
+  color: #555;
+}
+
 
 /* RESPONSIVE */
 
@@ -652,6 +666,7 @@ footer {
   }
 
 }
+
 
 
 
