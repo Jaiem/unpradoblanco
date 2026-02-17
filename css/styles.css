@@ -665,45 +665,30 @@ footer {
     text-align: center;
   }
 
-}
-/* ===============================
-   HOME - BLOQUE CENTRADO
-================================ */
-
-.inicio .intro {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.inicio .intro-bloque {
+}.inicio .intro-bloque {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 3rem;
   margin: 4rem auto;
+  flex-wrap: wrap; /* evita que se corte en pantallas pequeñas */
 }
 
-.inicio .intro-imagen img {
-  width: 300px;  /* tamaño equilibrado */
+.inicio .intro-bloque .intro-imagen {
+  margin: 0; /* elimina márgenes que pueden aplastar la imagen */
+}
+
+.inicio .intro-bloque .intro-imagen img {
+  width: 380px;      /* tamaño más grande */
   max-width: 100%;
   height: auto;
 }
 
 .inicio .intro-texto-lateral {
-  max-width: 500px;
+  max-width: 500px;   /* un poco más amplio */
+  margin: 0;          /* elimina márgenes globales */
   text-align: left;
 }
-
-/* HOME - imagen más grande */
-.inicio .intro-bloque .intro-imagen img {
-  width: 380px !important;  /* fuerza el tamaño */
-  max-width: 100%;
-}
-
-
-
-
-
 
 
 
