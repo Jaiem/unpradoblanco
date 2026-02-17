@@ -666,6 +666,34 @@ footer {
   }
 
 }
+/* ===============================
+   HOME - BLOQUE CENTRADO
+================================ */
+
+.inicio .intro {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.inicio .intro-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 4rem auto;
+}
+
+.inicio .intro-imagen img {
+  width: 300px;  /* tamaño equilibrado */
+  max-width: 100%;
+  height: auto;
+}
+
+.inicio .intro-texto-lateral {
+  max-width: 500px;
+  text-align: left;
+}
+
 
 
 
