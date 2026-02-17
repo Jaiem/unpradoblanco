@@ -189,71 +189,6 @@ main {
   line-height: 1.8;
   text-align: left; /* clave para que se lea bien */
 }
-/* ===============================
-   INTRO HISTORIA EDITORIAL
-================================ */
-
-.intro {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.intro-inicial,
-.intro-final {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #555;
-  text-align: center;
-  margin: 3rem auto;
-  max-width: 800px;
-}
-
-/* BLOQUE IMAGEN + TEXTO */
-
-.intro-bloque {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  margin: 5rem 0;
-}
-
-.intro-bloque.invertido {
-  flex-direction: row-reverse;
-}
-
-/* Imagen */
-
-.intro-imagen img {
-  width: 280px; /* más pequeña */
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  transition: transform 0.4s ease;
-}
-
-.intro-imagen img:hover {
-  transform: scale(1.03);
-}
-
-/* Texto lateral */
-
-.intro-texto-lateral {
-  max-width: 500px;
-}
-
-.intro-texto-lateral p {
-  font-size: 1.15rem;
-  font-style: italic;
-  color: #555;
-  line-height: 1.9;
-  text-align: left;
-}
-📱 RESPONSIVE (añ
-
-
-
-
 
 /* ===============================
    PROCESO
@@ -633,6 +568,7 @@ footer {
   text-align: center;
 }
 }
+
 
 
 
