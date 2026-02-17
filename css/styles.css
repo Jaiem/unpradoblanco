@@ -599,8 +599,8 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 4rem;
-  margin: 5rem 0;
+  gap: 2.5rem;      /* antes 4rem */
+  margin: 2.5rem 0; /* antes 5rem */
 }
 
 .historia .intro-bloque.invertido {
@@ -652,6 +652,7 @@ footer {
   }
 
 }
+
 
 
 
