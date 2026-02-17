@@ -694,6 +694,13 @@ footer {
   text-align: left;
 }
 
+* HOME - imagen más grande */
+
+.inicio .intro-imagen img {
+  width: 380px;      /* aumenta tamaño */
+  max-width: 100%;   /* evita límites del 35% */
+}
+
 
 
 
