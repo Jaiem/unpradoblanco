@@ -150,8 +150,8 @@ main {
   font-style: italic;
   max-width: 100%;
   margin-top: 10px;
-   margin-left:150px;
-   margin-right:150px;
+   margin-left:100px;
+   margin-right:100px;
   line-height: 1.8;
 }
 /* Imagen dentro de la intro */
@@ -692,6 +692,7 @@ footer {
   margin: 0;          /* elimina márgenes globales */
   text-align: left;
 }
+
 
 
 
