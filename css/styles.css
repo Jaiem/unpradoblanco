@@ -204,7 +204,7 @@ main {
 .proceso h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.4rem;
-  font-weight: 500;
+  font-weight: 560;
   letter-spacing: 0.08em;
   position: relative;
   text-align: center;
@@ -625,6 +625,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
