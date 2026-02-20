@@ -572,127 +572,6 @@ footer {
   text-align: center;
 }
 }
-/* ======================================
-   HISTORIA - DISEÑO EDITORIAL AISLADO
-====================================== */
-
-.historia .intro {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.historia .intro p {
-  margin: 0;
-}
-
-/* Párrafos inicial */
-.historia .intro-inicial{
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #555;
-  text-align: center;
-  margin: 4rem auto;
-  max-width: 800px;
-}
-
-/* BLOQUES LATERALES */
-
-.historia .intro-bloque {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.5rem;      /* antes 4rem */
-  margin: 2.5rem 0; /* antes 5rem */
-}
-
-.historia .intro-bloque.invertido {
-  flex-direction: row-reverse;
-}
-
-/* Imagen */
-
-.historia .intro-imagen img {
-  width: 260px;
-  height: auto;
-  border-radius: 6px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-/* Texto lateral */
-
-.historia .intro-texto-lateral {
-  max-width: 500px;
-}
-
-.historia .intro-texto-lateral p {
-  text-align: left;
-  font-size: 1.15rem;
-  line-height: 1.9;
-  font-style: italic;
-}
-/* Bloque final centrado independiente */
-
-.historia .bloque-final {
-  max-width: 800px;
-  margin: 3rem auto;
-  text-align: center;
-}
-
-.historia .bloque-final p {
-  font-size: 1.2rem;
-  font-style: italic;
-  line-height: 1.9;
-  color: #555;
-}
-
-
-/* RESPONSIVE */
-
-@media (max-width: 768px) {
-
-  .historia .intro-bloque {
-    flex-direction: column;
-    gap: 2rem;
-    margin: 3rem 0;
-  }
-
-  .historia .intro-bloque.invertido {
-    flex-direction: column;
-  }
-
-  .historia .intro-imagen img {
-    width: 80%;
-  }
-
-  .historia .intro-texto-lateral p {
-    text-align: center;
-  }
-
-}.inicio .intro-bloque {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin: 4rem auto;
-  flex-wrap: wrap; /* evita que se corte en pantallas pequeñas */
-}
-
-.inicio .intro-bloque .intro-imagen {
-  margin: 0; /* elimina márgenes que pueden aplastar la imagen */
-}
-
-.inicio .intro-bloque .intro-imagen img {
-  width: 380px;      /* tamaño más grande */
-  max-width: 100%;
-  height: auto;
-}
-
-.inicio .intro-texto-lateral {
-  max-width: 500px;   /* un poco más amplio */
-  margin: 0;          /* elimina márgenes globales */
-  text-align: left;
-}
 
 /* ===============================
    IMAGEN DE PRECIOS
@@ -719,6 +598,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
