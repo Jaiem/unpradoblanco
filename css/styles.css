@@ -60,8 +60,10 @@ header h1 {
   font-size: 3rem;
   font-weight: normal;
   letter-spacing: 0.02em;
-  color: #b59b82;
+  color: #2c2c2c;
   margin: 0 0 0 20px;
+  color: #b59b82;
+
 }
 
 /* Logo + título */
@@ -148,26 +150,26 @@ main {
   font-style: italic;
   max-width: 100%;
   margin-top: 10px;
-  margin-left: 100px;
-  margin-right: 100px;
+   margin-left:100px;
+   margin-right:100px;
   line-height: 1.8;
 }
 
 /* Contenedor de las imágenes */
 .imagenes-inline {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  display: flex;             /* Alinea las imágenes en una fila */
+  justify-content: center;    /* Centra las imágenes horizontalmente */
+  gap: 20px;                 /* Espacio entre las imágenes */
 }
 
 /* Estilo para las imágenes */
 .imagenes-inline img {
-  max-width: 30%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  margin-top: 25px;
-  margin-bottom: 25px;
+  max-width: 30%;            /* Limita el tamaño de las imágenes, puedes ajustarlo si quieres imágenes más pequeñas */
+  height: auto;              /* Mantiene la proporción */
+  border-radius: 8px;        /* Bordes redondeados */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);  /* Sombra opcional */
+  margin-top: 25px;          /* Márgenes arriba */
+  margin-bottom: 25px;       /* Márgenes abajo */
 }
 
 /* ===============================
@@ -190,6 +192,8 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 .papeleria h3 {
@@ -214,6 +218,7 @@ main {
 .subribbon-vertical .categoria {
   padding: 15px 20px;
   background-color: #f6f2ec;
+  border: none;
   border-radius: 12px;
   font-family: 'Playfair Display', serif;
   font-weight: 300;
@@ -223,7 +228,6 @@ main {
   transition: all 0.3s;
   text-align: left;
 }
-
 .subribbon-vertical .categoria:hover {
   background-color: #e7dfd2;
   color: #222;
@@ -243,6 +247,9 @@ main {
   padding: 0 15px;
   font-size: 1.15rem;
   color: #555;
+  margin-top: 0;
+  border: none;
+  background-color: transparent;
 }
 
 .descripcion p {
@@ -283,7 +290,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 20px;
-  height: 75vh;
+  height: 75vh;  /* Altura para pantallas grandes */
 }
 
 .hero::before {
@@ -296,29 +303,42 @@ main {
 /* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
   .hero {
-    height: 50vh;
+    height: 50vh;  /* Reduce la altura en pantallas de tablets */
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    height: 40vh;
+    height: 40vh;  /* Aún más pequeña en móviles */
   }
 }
 
 @media (max-width: 320px) {
   .hero {
-    height: 30vh;
+    height: 30vh;  /* Para pantallas muy pequeñas */
   }
 }
 
 /* Imágenes específicas para cada hero */
-.hero-home { background-image: url("../img/home/CABECERA_HOME.jpg"); }
-.hero-contacto { background-image: url("../img/contacto/CABECERA_CONTACTO.jpg"); }
-.hero-invitaciones { background-image: url("../img/invitaciones/INVITACION_CABECERA.jpg"); }
-.hero-papeleria { background-image: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg"); }
-.hero-proceso { background-image: url("../img/procesoArtesanal/CABECERA_PROCESO.jpg"); }
-.hero-mi-historia { background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg"); }
+.hero-home {
+  background-image: url("../img/home/CABECERA_HOME.jpg");
+}
+.hero-contacto {
+  background-image: url("../img/contacto/CABECERA_CONTACTO.jpg");
+}
+.hero-invitaciones {
+  background-image: url("../img/invitaciones/INVITACION_CABECERA.jpg");
+}
+.hero-papeleria {
+  background-image: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg");
+}
+.hero-proceso {
+  background-image: url("../img/procesoArtesanal/CABECERA_PROCESO.jpg");
+}
+.hero-mi-historia {
+  background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg");
+}
+
 
 /* ===============================
    LIGHTBOX
@@ -328,6 +348,8 @@ main {
   inset: 0;
   width: 100vw;
   height: 100vh;
+  margin: 0;
+  padding: 0;
   background: rgba(0, 0, 0, 0.85);
   display: none;
   align-items: center;
@@ -340,4 +362,387 @@ main {
   max-height: 85vh;
   object-fit: contain;
   border-radius: 4px;
-  box-shadow: 0 15px 40px rgba(0, 
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox-cerrar {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.lightbox-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.lightbox-flecha:hover {
+  opacity: 1;
+}
+
+.lightbox-flecha.izquierda { left: 30px; }
+.lightbox-flecha.derecha { right: 30px; }
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 40px 15px;
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  width: 100%;
+}
+
+/* ===============================
+   CONTACTO
+================================ */
+.contacto-directo h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.contacto-directo p {
+  margin-bottom: 20px;
+}
+
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  padding: 20px;
+  margin: 40px auto; /* ↑↓ margen arriba y abajo | ←→ centrado */
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #d6c8b6;
+  outline: none;
+}
+
+.formulario-contacto button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #d6c8b6;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #b59b82;
+}
+
+/* ===============================
+   HERO CONTENIDO
+================================ */
+
+.hero-contenido {
+  position: relative;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #2e2e2e;
+  text-align: center;
+}
+
+.hero-contenido h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.hero-contenido p {
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+/* ===============================
+   GALERÍA PROCESO
+================================ */
+.galeria-proceso {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.galeria-proceso img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 2px;
+  transition: transform 0.4s ease;
+}
+
+.galeria-proceso img:hover {
+  transform: scale(1.04);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  body { padding: 0; }
+
+  .papeleria-page {
+    flex-direction: column;
+  }
+
+  .subribbon-vertical,
+  .descripcion {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .subribbon-vertical {
+    padding: 10px;
+  }
+
+  .descripcion {
+    margin-top: 10px;
+  }
+
+  .logo-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  nav.ribbon {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+
+  .hero-contenido h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-contenido p {
+    font-size: 1rem;
+  }
+
+  .galeria-proceso {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+   .intro-bloque {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.intro-texto-lateral {
+  text-align: center;
+}
+}
+/* ======================================
+   HISTORIA - DISEÑO EDITORIAL AISLADO
+====================================== */
+
+.historia .intro {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.historia .intro p {
+  margin: 0;
+}
+
+/* Párrafos inicial */
+.historia .intro-inicial{
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 800px;
+}
+
+/* BLOQUES LATERALES */
+
+.historia .intro-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;      /* antes 4rem */
+  margin: 2.5rem 0; /* antes 5rem */
+}
+
+.historia .intro-bloque.invertido {
+  flex-direction: row-reverse;
+}
+
+/* Imagen */
+
+.historia .intro-imagen img {
+  width: 260px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* Texto lateral */
+
+.historia .intro-texto-lateral {
+  max-width: 500px;
+}
+
+.historia .intro-texto-lateral p {
+  text-align: left;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  font-style: italic;
+}
+/* Bloque final centrado independiente */
+
+.historia .bloque-final {
+  max-width: 800px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.historia .bloque-final p {
+  font-size: 1.2rem;
+  font-style: italic;
+  line-height: 1.9;
+  color: #555;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .historia .intro-bloque {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .historia .intro-bloque.invertido {
+    flex-direction: column;
+  }
+
+  .historia .intro-imagen img {
+    width: 80%;
+  }
+
+  .historia .intro-texto-lateral p {
+    text-align: center;
+  }
+
+}.inicio .intro-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 4rem auto;
+  flex-wrap: wrap; /* evita que se corte en pantallas pequeñas */
+}
+
+.inicio .intro-bloque .intro-imagen {
+  margin: 0; /* elimina márgenes que pueden aplastar la imagen */
+}
+
+.inicio .intro-bloque .intro-imagen img {
+  width: 380px;      /* tamaño más grande */
+  max-width: 100%;
+  height: auto;
+}
+
+.inicio .intro-texto-lateral {
+  max-width: 500px;   /* un poco más amplio */
+  margin: 0;          /* elimina márgenes globales */
+  text-align: left;
+}
+
+/* ===============================
+   IMAGEN DE PRECIOS
+================================ */
+.img-precios {
+  width: 100%;          /* La imagen ocupará todo el ancho disponible */
+  height: auto;         /* Mantiene la proporción */
+  display: block;       /* Necesario para centrarla */
+  margin: 0 auto;       /* Centra la imagen */
+  max-width: 800px;     /* Limita el tamaño máximo de la imagen */
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .img-precios {
+    max-width: 90%;      /* Para pantallas medianas, la imagen no ocupará más del 90% */
+  }
+}
+
+@media (max-width: 480px) {
+  .img-precios {
+    max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
