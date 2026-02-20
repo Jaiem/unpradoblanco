@@ -455,7 +455,7 @@ footer {
   gap: 20px;
   max-width: 600px;
   padding: 20px;
-  margin: 40px auto; /* ↑↓ margen arriba y abajo | ←→ centrado */
+  margin: 40px auto;
 }
 
 .formulario-contacto input,
@@ -468,6 +468,12 @@ footer {
   background-color: #fff;
   color: #333;
   transition: border-color 0.3s ease;
+}
+
+/* Aumentar el tamaño del cuadro de mensaje (textarea) */
+.formulario-contacto textarea {
+  min-height: 150px; /* Aumenta la altura mínima */
+  resize: vertical;  /* Permite que el usuario cambie el tamaño verticalmente */
 }
 
 .formulario-contacto input:focus,
@@ -489,6 +495,51 @@ footer {
 
 .formulario-contacto button:hover {
   background-color: #b59b82;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .formulario-contacto {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  /* Hacer que el formulario ocupe más espacio en pantallas pequeñas */
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 1.1rem;
+    padding: 14px;
+  }
+
+  .formulario-contacto textarea {
+    min-height: 200px; /* Mayor altura para móviles */
+  }
+
+  .contacto-directo h2 {
+    font-size: 1.3rem;
+  }
+
+  .contacto-directo p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .formulario-contacto {
+    padding: 10px;
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .formulario-contacto textarea {
+    min-height: 200px; /* Ajuste más grande en móviles pequeños */
+  }
 }
 
 /* ===============================
@@ -625,6 +676,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
