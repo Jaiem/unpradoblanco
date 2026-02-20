@@ -607,6 +607,7 @@ footer {
   height: auto;         /* Mantiene la proporción */
   display: block;       /* Necesario para centrarla */
   margin: 0 auto;       /* Centra la imagen */
+  margin-top: 20px;
   max-width: 800px;     /* Limita el tamaño máximo de la imagen */
 }
 
@@ -624,6 +625,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
