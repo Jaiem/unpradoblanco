@@ -164,12 +164,12 @@ main {
 
 /* Estilo para las imágenes */
 .imagenes-inline img {
-  max-width: 35%;            /* Limita el tamaño de las imágenes, puedes ajustarlo si quieres imágenes más pequeñas */
+  max-width: 30%;            /* Limita el tamaño de las imágenes, puedes ajustarlo si quieres imágenes más pequeñas */
   height: auto;              /* Mantiene la proporción */
   border-radius: 8px;        /* Bordes redondeados */
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);  /* Sombra opcional */
-  margin-top: 10px;          /* Márgenes arriba */
-  margin-bottom: 10px;       /* Márgenes abajo */
+  margin-top: 25px;          /* Márgenes arriba */
+  margin-bottom: 25px;       /* Márgenes abajo */
 }
 
 /* ===============================
@@ -719,6 +719,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
