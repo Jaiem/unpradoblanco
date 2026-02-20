@@ -155,13 +155,18 @@ main {
   line-height: 1.8;
 }
 
-.historia img {
-  max-width: 35%;       /* ocupa solo la mitad del ancho del contenedor */
-  height: auto;         /* mantiene proporción */
-  border-radius: 8px;   /* esquinas suavizadas */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra suave */
-  display: block;       /* necesario para centrar */
-  margin: 2rem auto;    /* centra y separa de los párrafos */
+/* Asegura que las imágenes estén alineadas horizontalmente */
+.imagenes-inline {
+  display: flex;            /* Usamos flexbox para alinearlas en fila */
+  justify-content: center;   /* Centra las imágenes horizontalmente */
+  gap: 20px;                /* Añade espacio entre las imágenes */
+}
+
+.imagenes-inline img {
+  max-width: 45%;           /* Limita el tamaño de las imágenes para que no se desborden */
+  height: auto;             /* Mantiene la proporción de la imagen */
+  border-radius: 8px;       /* Opcional: para darle bordes redondeados a las imágenes */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);  /* Opcional: agrega sombra a las imágenes */
 }
 
 /* ===============================
@@ -711,6 +716,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
