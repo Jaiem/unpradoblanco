@@ -693,6 +693,31 @@ footer {
   text-align: left;
 }
 
+/* ===============================
+   IMAGEN DE PRECIOS
+================================ */
+.img-precios {
+  width: 100%;          /* La imagen ocupará todo el ancho disponible */
+  height: auto;         /* Mantiene la proporción */
+  display: block;       /* Necesario para centrarla */
+  margin: 0 auto;       /* Centra la imagen */
+  max-width: 800px;     /* Limita el tamaño máximo de la imagen */
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  .img-precios {
+    max-width: 90%;      /* Para pantallas medianas, la imagen no ocupará más del 90% */
+  }
+}
+
+@media (max-width: 480px) {
+  .img-precios {
+    max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
+  }
+}
 
 
 
