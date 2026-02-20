@@ -86,6 +86,32 @@ header h1 {
   border: 2px solid #b59b82;
 }
 
+.inicio .intro-bloque {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 4rem auto;
+  flex-wrap: wrap; /* evita que se corte en pantallas pequeñas */
+}
+/* ===============================
+   INDEX
+================================ */
+.inicio .intro-bloque .intro-imagen {
+  margin: 0; /* elimina márgenes que pueden aplastar la imagen */
+}
+
+.inicio .intro-bloque .intro-imagen img {
+  width: 380px;      /* tamaño más grande */
+  max-width: 100%;
+  height: auto;
+}
+
+.inicio .intro-texto-lateral {
+  max-width: 500px;   /* un poco más amplio */
+  margin: 0;          /* elimina márgenes globales */
+  text-align: left;
+}
 /* ===============================
    NAVEGACIÓN
 ================================ */
@@ -598,6 +624,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
