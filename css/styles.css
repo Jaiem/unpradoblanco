@@ -307,11 +307,11 @@ main {
 .hero {
   position: relative;
   width: 100%;
-  height: 75vh; /* Altura en pantallas grandes */
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 20px;
+  height: 75vh;  /* Altura para pantallas grandes */
 }
 
 .hero::before {
@@ -321,20 +321,26 @@ main {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Ajustes para pantallas pequeñas */
+/* Ajustes para pantallas más pequeñas */
 @media (max-width: 768px) {
   .hero {
-    height: 50vh;  /* Altura ajustada en pantallas medianas (tabletas) */
+    height: 50vh;  /* Reduce la altura en pantallas de tablets */
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    height: 40vh;  /* Altura aún más pequeña en pantallas móviles */
+    height: 40vh;  /* Aún más pequeña en móviles */
   }
 }
 
-/* Varias imágenes hero con diferentes fondos */
+@media (max-width: 320px) {
+  .hero {
+    height: 30vh;  /* Para pantallas muy pequeñas */
+  }
+}
+
+/* Imágenes específicas para cada hero */
 .hero-home {
   background-image: url("../img/home/CABECERA_HOME.jpg");
 }
@@ -353,6 +359,7 @@ main {
 .hero-mi-historia {
   background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg");
 }
+
 
 /* ===============================
    LIGHTBOX
@@ -733,6 +740,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
