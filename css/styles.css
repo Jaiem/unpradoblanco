@@ -154,43 +154,14 @@ main {
    margin-right:100px;
   line-height: 1.8;
 }
-/* Imagen dentro de la intro */
-.intro-imagen {
-  text-align: center;  /* centra la imagen */
-  margin: 2rem 0;      /* espacio arriba y abajo */
-}
-.intro-imagen img {
+
+.historia img {
   max-width: 35%;       /* ocupa solo la mitad del ancho del contenedor */
   height: auto;         /* mantiene proporción */
   border-radius: 8px;   /* esquinas suavizadas */
   box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra suave */
   display: block;       /* necesario para centrar */
   margin: 2rem auto;    /* centra y separa de los párrafos */
-}
-.intro-bloque {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin: 2rem 0;
-}
-
-.intro-bloque .intro-imagen {
-  margin: 0;
-}
-
-.intro-bloque img {
-  max-width: 320px;
-   margin: 0;
-}
-
-.intro-texto-lateral {
-  max-width: 420px;
-  font-size: 1.15rem;
-  font-style: italic;
-  color: #555;
-  line-height: 1.8;
-  text-align: left; /* clave para que se lea bien */
 }
 
 /* ===============================
@@ -740,6 +711,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
