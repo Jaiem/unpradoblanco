@@ -185,7 +185,7 @@ main {
 .imagenes-inline {
   display: flex;             /* Alinea las imágenes en una fila */
   justify-content: center;    /* Centra las imágenes horizontalmente */
-  gap: 20px;                 /* Espacio entre las imágenes */
+  gap: 40px;                 /* Espacio entre las imágenes */
 }
 
 /* Estilo para las imágenes */
@@ -676,6 +676,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
