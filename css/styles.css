@@ -27,6 +27,7 @@ body {
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
+  margin: 0;
   padding: 50px;
 }
 
@@ -319,7 +320,6 @@ main {
 .hero-proceso { background-image: url("../img/procesoArtesanal/CABECERA_PROCESO.jpg"); }
 .hero-mi-historia { background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg"); }
 
-
 /* ===============================
    LIGHTBOX
 ================================ */
@@ -339,4 +339,5 @@ main {
   max-width: 85vw;
   max-height: 85vh;
   object-fit: contain;
-  border-radius: 4
+  border-radius: 4px;
+  box-shadow: 0 15px 40px rgba(0, 
