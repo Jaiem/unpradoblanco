@@ -325,24 +325,8 @@ main {
   inset: 0;
   background: rgba(255, 255, 255, 0.25);
 }
-
-/* Ajustes para pantallas más pequeñas */
-@media (max-width: 768px) {
-  .hero {
-    height: 50vh;  /* Reduce la altura en pantallas de tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    height: 40vh;  /* Aún más pequeña en móviles */
-  }
-}
-
-@media (max-width: 320px) {
-  .hero {
-    height: 30vh;  /* Para pantallas muy pequeñas */
-  }
+.hero {
+  height: clamp(25vh, 50vh, 75vh);
 }
 
 /* Imágenes específicas para cada hero */
@@ -676,6 +660,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
