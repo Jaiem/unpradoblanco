@@ -325,9 +325,6 @@ main {
   inset: 0;
   background: rgba(255, 255, 255, 0.25);
 }
-.hero {
-  height: 85vh; /* escritorio */
-}
 
 /* Tablet */
 @media (max-width: 768px) {
@@ -339,7 +336,7 @@ main {
 /* Móvil */
 @media (max-width: 480px) {
   .hero {
-    height: 25vh;
+    height: 10vh;
   }
 }
 
@@ -674,6 +671,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
