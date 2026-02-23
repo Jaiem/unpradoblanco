@@ -336,7 +336,7 @@ main {
 /* Móvil */
 @media (max-width: 480px) {
   .hero {
-    height: 30vh;
+    height: 40vh;
   }
 }
 
@@ -854,6 +854,7 @@ footer {
     min-width: 80px;                /* opcional: ancho mínimo */
   }
 }
+
 
 
 
