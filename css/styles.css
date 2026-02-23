@@ -921,7 +921,6 @@ footer {
   display: flex;
   justify-content: center;
   gap: 20px;         /* menos separación en desktop */
-  flex-wrap: wrap;    /* permite que se muevan a la siguiente línea si hace falta */
 }
 
 .imagenes-inline img {
@@ -947,4 +946,5 @@ footer {
     max-width: 300px;        /* límite máximo */
   }
 }
+
 
