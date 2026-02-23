@@ -694,6 +694,24 @@ footer {
   }
 }
 
+/* ===============================
+   HEADER RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 10px;  /* menos espacio alrededor */
+  }
+
+  header h1 {
+    font-size: 2rem;     /* más pequeño para móvil */
+    margin-left: 10px;   /* reduce margen */
+  }
+
+  .logo-container img {
+    width: 60px;
+    height: 60px;
+  }
+}
 
 
 
