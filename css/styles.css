@@ -326,7 +326,7 @@ main {
   background: rgba(255, 255, 255, 0.25);
 }
 .hero {
-  height: clamp(25vh, 50vh, 75vh);
+  height: clamp(35vh, 65vh, 95vh);
 }
 
 /* Imágenes específicas para cada hero */
@@ -660,6 +660,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
