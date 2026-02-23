@@ -712,6 +712,110 @@ footer {
     height: 60px;
   }
 }
+/* ===============================
+   RESPONSIVE GLOBAL PARA MÓVIL
+================================ */
+@media (max-width: 768px) {
+
+  /* Body y padding */
+  body {
+    padding: 15px;
+  }
+
+  /* Header más compacto */
+  header {
+    padding: 15px 10px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin-left: 10px;
+  }
+
+  .logo-container img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Navegación Ribbon */
+  nav.ribbon {
+    justify-content: center;
+    gap: 10px; /* reduce espacio entre tabs */
+    flex-wrap: wrap; /* para que no se corte */
+  }
+
+  nav.ribbon a {
+    padding: 8px 12px; /* menos padding para caber */
+    font-size: 0.9rem;
+  }
+
+  /* Hero */
+  .hero {
+    height: 30vh;
+  }
+
+  .hero-contenido h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-contenido p {
+    font-size: 0.9rem;
+  }
+
+  /* Intro bloque */
+  .intro-bloque {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .intro-texto-lateral {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  /* Tabs y subribbon vertical */
+  .subribbon-vertical {
+    width: 100%;
+    flex-direction: row; /* opcional: horizontal en móvil si hay espacio */
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .subribbon-vertical .categoria {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Galerías */
+  .galeria-papeleria,
+  .galeria-proceso {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  /* Formularios */
+  .formulario-contacto {
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .formulario-contacto textarea {
+    min-height: 150px;
+  }
+
+  /* Imágenes precios */
+  .img-precios {
+    max-width: 85%;
+  }
+}
 
 
 
