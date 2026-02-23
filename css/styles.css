@@ -929,15 +929,14 @@ footer {
     max-width: 300px;   /* límite máximo en móvil */
   }
 }
-
 /* ===============================
    MI HISTORIA - IMÁGENES RESPONSIVE Y REDONDEADAS
 ================================ */
 .imagenes-inline {
   display: flex;
   justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;       /* permite que se muevan a la siguiente línea */
+  gap: 20px;         /* menos separación en desktop */
+  flex-wrap: wrap;    /* permite que se muevan a la siguiente línea si hace falta */
 }
 
 .imagenes-inline img {
@@ -954,7 +953,7 @@ footer {
 @media (max-width: 768px) {
   .imagenes-inline {
     flex-direction: column; /* imágenes en columna */
-    gap: 15px;              /* espacio entre ellas */
+    gap: 15px;              /* espacio más reducido en móvil */
     align-items: center;     /* centra las imágenes */
   }
 
@@ -963,67 +962,3 @@ footer {
     max-width: 300px;        /* límite máximo */
   }
 }
-
-/* ===============================
-   MI HISTORIA - IMÁGENES RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .imagenes-inline {
-    flex-direction: column; /* pone las imágenes en columna */
-    gap: 15px;              /* espacio entre ellas */
-  }
-
-  .imagenes-inline img {
-    width: 90%;             /* casi todo el ancho del contenedor */
-    max-width: 300px;       /* limita tamaño máximo */
-    height: auto;           /* mantiene proporción */
-    display: block;
-    margin: 0 auto;         /* centra la imagen */
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
