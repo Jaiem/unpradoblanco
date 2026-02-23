@@ -181,22 +181,7 @@ main {
   line-height: 1.8;
 }
 
-/* Contenedor de las imágenes */
-.imagenes-inline {
-  display: flex;             /* Alinea las imágenes en una fila */
-  justify-content: center;    /* Centra las imágenes horizontalmente */
-  gap: 40px;                 /* Espacio entre las imágenes */
-}
 
-/* Estilo para las imágenes */
-.imagenes-inline img {
-  max-width: 20%;            /* Limita el tamaño de las imágenes, puedes ajustarlo si quieres imágenes más pequeñas */
-  height: auto;              /* Mantiene la proporción */
-  border-radius: 8px;        /* Bordes redondeados */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);  /* Sombra opcional */
-  margin-top: 25px;          /* Márgenes arriba */
-  margin-bottom: 25px;       /* Márgenes abajo */
-}
 
 /* ===============================
    PROCESO
@@ -962,3 +947,4 @@ footer {
     max-width: 300px;        /* límite máximo */
   }
 }
+
