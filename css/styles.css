@@ -920,7 +920,9 @@ footer {
 .imagenes-inline {
   display: flex;
   justify-content: center;
-  gap: 20px;         /* menos separación en desktop */
+  gap: 12px;          /* menos separación */
+  flex-wrap: nowrap;  /* que no salten línea en desktop */
+  margin: 10px;
 }
 
 .imagenes-inline img {
@@ -946,5 +948,6 @@ footer {
     max-width: 300px;        /* límite máximo */
   }
 }
+
 
 
