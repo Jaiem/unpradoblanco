@@ -909,6 +909,25 @@ footer {
     font-size: 0.9rem;
   }
 }
+/* Home - imágenes de intro */
+@media (max-width: 768px) {
+  .inicio .intro-bloque .intro-imagen img {
+    width: 80%;       /* ocupa la mayor parte del contenedor */
+    max-width: 300px; /* limita tamaño máximo */
+    height: auto;     /* mantiene proporción */
+  }
+}
+
+/* Mi Historia - imágenes de contenido */
+@media (max-width: 768px) {
+  .mi-historia .contenido-imagen img {
+    width: 90%;       /* ocupa casi todo el ancho disponible */
+    max-width: 350px; /* límite para no quedar gigante */
+    height: auto;
+    display: block;
+    margin: 0 auto;   /* centra la imagen */
+  }
+}
 
 
 
