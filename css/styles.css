@@ -339,7 +339,7 @@ main {
 /* Móvil */
 @media (max-width: 480px) {
   .hero {
-    height: 38vh;
+    height: 25vh;
   }
 }
 
@@ -674,6 +674,7 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+
 
 
 
