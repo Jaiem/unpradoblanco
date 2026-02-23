@@ -671,6 +671,28 @@ footer {
     max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
   }
 }
+@media (max-width: 768px) {
+
+  body {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero {
+    height: 30vh;
+  }
+
+  .hero-contenido h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-contenido p {
+    font-size: 0.9rem;
+  }
+}
 
 
 
