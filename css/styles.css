@@ -920,9 +920,9 @@ footer {
 .imagenes-inline {
   display: flex;
   justify-content: center;
-  gap: 12px;          /* menos separación */
-  flex-wrap: nowrap;  /* que no salten línea en desktop */
-  margin: 10px;
+  gap: 20px;
+  max-width: 700px;   /* 👈 CLAVE */
+  margin: 40px auto;  /* centrado real */
 }
 
 .imagenes-inline img {
@@ -948,6 +948,7 @@ footer {
     max-width: 300px;        /* límite máximo */
   }
 }
+
 
 
 
