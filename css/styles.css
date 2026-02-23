@@ -816,6 +816,26 @@ footer {
     max-width: 85%;
   }
 }
+/* ===============================
+   INTRO TEXTO MÓVIL
+================================ */
+@media (max-width: 768px) {
+  .intro p {
+    margin-left: 10px;   /* márgenes pequeños */
+    margin-right: 10px;
+    font-size: 1rem;     /* tamaño más cómodo */
+    line-height: 1.5;    /* un poco más compacto */
+  }
+}
+
+@media (max-width: 480px) {
+  .intro p {
+    margin-left: 5px;    /* aún más ajustado en móvil pequeño */
+    margin-right: 5px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
 
 
 
