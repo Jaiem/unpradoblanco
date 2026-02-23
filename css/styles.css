@@ -836,19 +836,25 @@ footer {
     line-height: 1.4;
   }
 }
-/* Ribbon multi-línea en móvil */
+
+/* Tabs en móvil y tablet */
 @media (max-width: 768px) {
   nav.ribbon {
-    flex-wrap: wrap;
-    justify-content: center; /* centrado bonito */
-    gap: 8px;                /* menos espacio entre tabs */
+    flex-wrap: wrap;           /* permitir que se muevan a otra línea */
+    justify-content: center;   /* centrado */
+    gap: 6px;                  /* reducir espacio entre tabs */
+    margin-top: 10px;          /* menos margen */
   }
 
   nav.ribbon a {
-    padding: 8px 12px;
-    font-size: 0.9rem;
+    padding: 6px 10px !important;  /* reduce padding para que quepan */
+    font-size: 0.9rem !important;  /* más pequeño en móvil */
+    flex: auto;                     /* permite que se ajusten */
+    text-align: center;             /* que no se desborde */
+    min-width: 80px;                /* opcional: ancho mínimo */
   }
 }
+
 
 
 
