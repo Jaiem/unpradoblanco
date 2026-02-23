@@ -922,12 +922,13 @@ footer {
 @media (max-width: 768px) {
   .imagenes-inline img {
     width: 90%;        /* ocupa casi todo el ancho del contenedor */
-    max-width: 300px;  /* no demasiado grande */
+    max-width: 200px;  /* no demasiado grande */
     height: auto;      /* mantiene proporción */
     display: block;
     margin: 0 auto 20px auto; /* centra y agrega margen inferior */
   }
 }
+
 
 
 
