@@ -854,6 +854,61 @@ footer {
     min-width: 80px;                /* opcional: ancho mínimo */
   }
 }
+/* ===============================
+   HERO Y HEADER RESPONSIVE MÓVIL
+================================ */
+
+/* Pantallas ≤ 480px */
+@media (max-width: 480px) {
+
+  /* Header */
+  header {
+    padding: 12px 10px;       /* un poco más compacto */
+  }
+
+  header h1 {
+    font-size: 1.8rem;        /* tamaño legible */
+    margin-left: 10px;
+  }
+
+  .logo-container img {
+    width: 90px;               /* más grande que antes */
+    height: 90px;
+  }
+
+  /* Hero */
+  .hero {
+    height: 45vh;              /* un poco más alto para verse mejor */
+  }
+
+  .hero-contenido h2 {
+    font-size: 1.6rem;         /* proporcional al hero */
+  }
+
+  .hero-contenido p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet ≤ 768px */
+@media (max-width: 768px) {
+  .logo-container img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .hero-contenido h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero-contenido p {
+    font-size: 0.9rem;
+  }
+}
 
 
 
