@@ -836,6 +836,19 @@ footer {
     line-height: 1.4;
   }
 }
+/* Ribbon multi-línea en móvil */
+@media (max-width: 768px) {
+  nav.ribbon {
+    flex-wrap: wrap;
+    justify-content: center; /* centrado bonito */
+    gap: 8px;                /* menos espacio entre tabs */
+  }
+
+  nav.ribbon a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
 
 
 
