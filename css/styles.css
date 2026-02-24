@@ -27,7 +27,6 @@ body {
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
-  margin: 0;
   padding: 50px;
 }
 
@@ -60,22 +59,15 @@ header h1 {
   font-size: 3.5rem;
   font-weight: normal;
   letter-spacing: 0.02em;
-  color: #2c2c2c;
   margin: 0 0 0 20px;
   color: #b59b82;
-
 }
 
-/* Logo + título */
 .logo-title-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
-}
-
-.logo-container {
-  flex-shrink: 0;
 }
 
 .logo-container img {
@@ -86,32 +78,6 @@ header h1 {
   border: 2px solid #b59b82;
 }
 
-.inicio .intro-bloque {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  margin: 4rem auto;
-  flex-wrap: wrap; /* evita que se corte en pantallas pequeñas */
-}
-/* ===============================
-   INDEX
-================================ */
-.inicio .intro-bloque .intro-imagen {
-  margin: 0; /* elimina márgenes que pueden aplastar la imagen */
-}
-
-.inicio .intro-bloque .intro-imagen img {
-  width: 380px;      /* tamaño más grande */
-  max-width: 100%;
-  height: auto;
-}
-
-.inicio .intro-texto-lateral {
-  max-width: 500px;   /* un poco más amplio */
-  margin: 0;          /* elimina márgenes globales */
-  text-align: center;
-}
 /* ===============================
    NAVEGACIÓN
 ================================ */
@@ -136,163 +102,15 @@ nav.ribbon a {
 
 nav.ribbon a:hover {
   background-color: #e7dfd2;
-  color: #222;
 }
 
 nav.ribbon a.active {
   background-color: #d6c8b6;
-  color: #222;
   font-weight: 600;
 }
 
 /* ===============================
-   MAIN
-================================ */
-main {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* ===============================
-   INTRODUCCIÓN
-================================ */
-.intro {
-  margin: 0;
-}
-
-.intro h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 30px;
-  padding-left: 12px;
-  color: #5b4d4b;
-}
-
-.intro p {
-  font-size: 1.18rem;
-  color: #555;
-  font-style: italic;
-  max-width: 100%;
-  margin-top: 10px;
-   margin-left:100px;
-   margin-right:100px;
-  line-height: 1.8;
-}
-
-
-
-/* ===============================
-   PROCESO
-================================ */
-.proceso h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem;
-  font-weight: 540;
-  letter-spacing: 0.08em;
-  position: relative;
-  text-align: center;
-  line-height: 2;
-}
-
-/* ===============================
-   PAPELERÍA
-================================ */
-.papeleria-page {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-  margin: 0;
-  padding: 0;
-}
-
-.papeleria h3 {
-  font-family: 'Playfair Display', serif;
-  margin-top: 20px;
-}
-
-/* Submenú lateral */
-.subribbon-vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 220px;
-  padding: 20px;
-  background-color: #f6f2ec;
-  border-radius: 10px;
-  position: sticky;
-  top: 30px;
-  flex-shrink: 0;
-}
-
-.subribbon-vertical .categoria {
-  padding: 15px 20px;
-  background-color: #f6f2ec;
-  border: none;
-  border-radius: 12px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 300;
-  font-size: 1.1rem;
-  color: #4a4a4a;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-align: left;
-}
-.subribbon-vertical .categoria:hover {
-  background-color: #e7dfd2;
-  color: #222;
-}
-
-.subribbon-vertical .categoria.active {
-  background-color: #d6c8b6;
-  color: #222;
-  font-weight: 580;
-}
-
-/* Descripción */
-.descripcion {
-  flex-grow: 1;
-  width: 100%;
-  max-width: calc(100% - 240px);
-  padding: 0 15px;
-  font-size: 1.15rem;
-  color: #555;
-  margin-top: 0;
-  border: none;
-  background-color: transparent;
-}
-
-.descripcion p {
-  font-size: 1.1rem;
-  font-style: italic;
-  color: #555;
-}
-
-/* ===============================
-   GALERÍA PAPELERÍA
-================================ */
-.galeria-papeleria {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 30px;
-}
-
-.galeria-papeleria img {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  border-radius: 4px;
-  transition: transform 0.4s ease;
-}
-
-.galeria-papeleria img:hover {
-  transform: scale(1.04);
-}
-
-/* ===============================
-   HERO GLOBAL
+   HERO
 ================================ */
 .hero {
   position: relative;
@@ -301,7 +119,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 20px;
-  height: 75vh;  /* Altura para pantallas grandes */
+  height: 75vh;
 }
 
 .hero::before {
@@ -311,221 +129,9 @@ main {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* Tablet */
-@media (max-width: 768px) {
-  .hero {
-    height: 50vh;
-  }
-}
-
-/* Móvil */
-@media (max-width: 480px) {
-  .hero {
-    height: 40vh;
-  }
-}
-
-/* Imágenes específicas para cada hero */
-.hero-home {
-  background-image: url("../img/home/CABECERA_HOME.jpg");
-}
-.hero-contacto {
-  background-image: url("../img/contacto/CABECERA_CONTACTO.jpg");
-}
-.hero-invitaciones {
-  background-image: url("../img/invitaciones/INVITACION_CABECERA.jpg");
-}
-.hero-papeleria {
-  background-image: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg");
-}
-.hero-proceso {
-  background-image: url("../img/procesoArtesanal/CABECERA_PROCESO.jpg");
-}
-.hero-mi-historia {
-  background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg");
-}
-
-
-/* ===============================
-   LIGHTBOX
-================================ */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 99999;
-}
-
-.lightbox-imagen {
-  max-width: 85vw;
-  max-height: 85vh;
-  object-fit: contain;
-  border-radius: 4px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-}
-
-.lightbox-cerrar {
-  position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 3rem;
-  color: #fff;
-  cursor: pointer;
-}
-
-.lightbox-flecha {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 3rem;
-  padding: 10px 20px;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.3s;
-}
-
-.lightbox-flecha:hover {
-  opacity: 1;
-}
-
-.lightbox-flecha.izquierda { left: 30px; }
-.lightbox-flecha.derecha { right: 30px; }
-
-/* ===============================
-   FOOTER
-================================ */
-footer {
-  text-align: center;
-  padding: 40px 15px;
-  font-size: 0.95rem;
-  color: #888;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
-  background-color: #fff;
-  width: 100%;
-}
-
-/* ===============================
-   CONTACTO
-================================ */
-.contacto-directo h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin-bottom: 20px;
-}
-
-.contacto-directo p {
-  margin-bottom: 20px;
-}
-
-.formulario-contacto {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
-  padding: 20px;
-  margin: 40px auto;
-}
-
-.formulario-contacto input,
-.formulario-contacto textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #333;
-  transition: border-color 0.3s ease;
-}
-
-/* Aumentar el tamaño del cuadro de mensaje (textarea) */
-.formulario-contacto textarea {
-  min-height: 150px; /* Aumenta la altura mínima */
-  resize: vertical;  /* Permite que el usuario cambie el tamaño verticalmente */
-}
-
-.formulario-contacto input:focus,
-.formulario-contacto textarea:focus {
-  border-color: #d6c8b6;
-  outline: none;
-}
-
-.formulario-contacto button {
-  padding: 12px 20px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 8px;
-  background-color: #d6c8b6;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.formulario-contacto button:hover {
-  background-color: #b59b82;
-}
-
-/* ===============================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .formulario-contacto {
-    padding: 15px;
-    margin: 20px auto;
-  }
-
-  /* Hacer que el formulario ocupe más espacio en pantallas pequeñas */
-  .formulario-contacto input,
-  .formulario-contacto textarea {
-    font-size: 1.1rem;
-    padding: 14px;
-  }
-
-  .formulario-contacto textarea {
-    min-height: 200px; /* Mayor altura para móviles */
-  }
-
-  .contacto-directo h2 {
-    font-size: 1.3rem;
-  }
-
-  .contacto-directo p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .formulario-contacto {
-    padding: 10px;
-  }
-
-  .formulario-contacto input,
-  .formulario-contacto textarea {
-    font-size: 1rem;
-    padding: 12px;
-  }
-
-  .formulario-contacto textarea {
-    min-height: 200px; /* Ajuste más grande en móviles pequeños */
-  }
-}
-
 /* ===============================
    HERO CONTENIDO
 ================================ */
-
 .hero-contenido {
   position: relative;
   height: 100%;
@@ -553,164 +159,23 @@ footer {
 }
 
 /* ===============================
-   GALERÍA PROCESO
+   HERO IMÁGENES
 ================================ */
-.galeria-proceso {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.galeria-proceso img {
-  width: 100%;
-  height: 420px;
-  object-fit: cover;
-  border-radius: 2px;
-  transition: transform 0.4s ease;
-}
-
-.galeria-proceso img:hover {
-  transform: scale(1.04);
-}
+.hero-home { background-image: url("../img/home/CABECERA_HOME.jpg"); }
+.hero-contacto { background-image: url("../img/contacto/CABECERA_CONTACTO.jpg"); }
+.hero-invitaciones { background-image: url("../img/invitaciones/INVITACION_CABECERA.jpg"); }
+.hero-papeleria { background-image: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg"); }
+.hero-proceso { background-image: url("../img/procesoArtesanal/CABECERA_PROCESO.jpg"); }
+.hero-mi-historia { background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg"); }
 
 /* ===============================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  body { padding: 0; }
-
-  .papeleria-page {
-    flex-direction: column;
-  }
-
-  .subribbon-vertical,
-  .descripcion {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .subribbon-vertical {
-    padding: 10px;
-  }
-
-  .descripcion {
-    margin-top: 10px;
-  }
-
-  .logo-container img {
-    width: 60px;
-    height: 60px;
-  }
-
-  nav.ribbon {
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-
-  .hero-contenido h2 {
-    font-size: 2.5rem;
-  }
-
-  .hero-contenido p {
-    font-size: 1rem;
-  }
-
-  .galeria-proceso {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-   .intro-bloque {
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.intro-texto-lateral {
-  text-align: center;
-}
-}
-
-/* ===============================
-   IMAGEN DE PRECIOS
-================================ */
-.img-precios {
-  width: 100%;          /* La imagen ocupará todo el ancho disponible */
-  height: auto;         /* Mantiene la proporción */
-  display: block;       /* Necesario para centrarla */
-  margin: 0 auto;       /* Centra la imagen */
-  margin-top: 20px;
-  max-width: 800px;     /* Limita el tamaño máximo de la imagen */
-}
-
-/* ===============================
-   RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  .img-precios {
-    max-width: 90%;      /* Para pantallas medianas, la imagen no ocupará más del 90% */
-  }
-}
-
-@media (max-width: 480px) {
-  .img-precios {
-    max-width: 85%;      /* Para pantallas pequeñas, la imagen ocupará solo el 85% del ancho */
-  }
-}
-@media (max-width: 768px) {
-
-  body {
-    padding: 15px;
-  }
-
-  header h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero {
-    height: 30vh;
-  }
-
-  .hero-contenido h2 {
-    font-size: 1.8rem;
-  }
-
-  .hero-contenido p {
-    font-size: 0.9rem;
-  }
-}
-
-/* ===============================
-   HEADER RESPONSIVE
-================================ */
-@media (max-width: 768px) {
-  header {
-    padding: 15px 10px;  /* menos espacio alrededor */
-  }
-
-  header h1 {
-    font-size: 2rem;     /* más pequeño para móvil */
-    margin-left: 10px;   /* reduce margen */
-  }
-
-  .logo-container img {
-    width: 60px;
-    height: 60px;
-  }
-}
-/* ===============================
-   RESPONSIVE GLOBAL PARA MÓVIL
+   RESPONSIVE GLOBAL
 ================================ */
 @media (max-width: 768px) {
 
-  /* Body y padding */
-  body {
-    padding: 15px;
-  }
+  body { padding: 15px; }
 
-  /* Header más compacto */
-  header {
-    padding: 15px 10px;
-  }
+  header { padding: 15px 10px; }
 
   header h1 {
     font-size: 2rem;
@@ -718,238 +183,58 @@ footer {
   }
 
   .logo-container img {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
-  /* Navegación Ribbon */
   nav.ribbon {
     justify-content: center;
-    gap: 10px; /* reduce espacio entre tabs */
-    flex-wrap: wrap; /* para que no se corte */
+    gap: 6px;
+    margin-top: 10px;
   }
 
   nav.ribbon a {
-    padding: 8px 12px; /* menos padding para caber */
+    padding: 6px 10px;
     font-size: 0.9rem;
+    min-width: 80px;
   }
 
-  /* Hero */
-  .hero {
-    height: 30vh;
-  }
+  .hero { height: 50vh; }
 
-  .hero-contenido h2 {
-    font-size: 1.8rem;
-  }
+  .hero-contenido h2 { font-size: 1.8rem; }
+  .hero-contenido p { font-size: 0.9rem; }
 
-  .hero-contenido p {
-    font-size: 0.9rem;
-  }
-
-  /* Intro bloque */
-  .intro-bloque {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .intro-texto-lateral {
-    text-align: center;
+  .intro p {
     margin-left: 10px;
     margin-right: 10px;
-  }
-
-  /* Tabs y subribbon vertical */
-  .subribbon-vertical {
-    width: 100%;
-    flex-direction: row; /* opcional: horizontal en móvil si hay espacio */
-    flex-wrap: wrap;
-    padding: 10px;
-    gap: 8px;
-  }
-
-  .subribbon-vertical .categoria {
-    padding: 8px 10px;
-    font-size: 0.9rem;
-  }
-
-  /* Galerías */
-  .galeria-papeleria,
-  .galeria-proceso {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-  }
-
-  /* Formularios */
-  .formulario-contacto {
-    padding: 10px;
-    gap: 15px;
-  }
-
-  .formulario-contacto input,
-  .formulario-contacto textarea {
     font-size: 1rem;
-    padding: 10px;
+    line-height: 1.5;
   }
 
-  .formulario-contacto textarea {
-    min-height: 150px;
-  }
-
-  /* Imágenes precios */
-  .img-precios {
-    max-width: 85%;
-  }
-}
-/* ===============================
-   INTRO TEXTO MÓVIL
-================================ */
-@media (max-width: 768px) {
-  .intro p {
-    margin-left: 10px;   /* márgenes pequeños */
-    margin-right: 10px;
-    font-size: 1rem;     /* tamaño más cómodo */
-    line-height: 1.5;    /* un poco más compacto */
+  .imagenes-inline {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
 @media (max-width: 480px) {
+
+  .hero { height: 45vh; }
+
+  header h1 { font-size: 1.8rem; }
+
+  .logo-container img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .hero-contenido h2 { font-size: 1.6rem; }
+  .hero-contenido p { font-size: 0.85rem; }
+
   .intro p {
-    margin-left: 5px;    /* aún más ajustado en móvil pequeño */
+    margin-left: 5px;
     margin-right: 5px;
     font-size: 0.95rem;
     line-height: 1.4;
   }
 }
-
-/* Tabs en móvil y tablet */
-@media (max-width: 768px) {
-  nav.ribbon {
-    flex-wrap: wrap;           /* permitir que se muevan a otra línea */
-    justify-content: center;   /* centrado */
-    gap: 6px;                  /* reducir espacio entre tabs */
-    margin-top: 10px;          /* menos margen */
-  }
-
-  nav.ribbon a {
-    padding: 6px 10px !important;  /* reduce padding para que quepan */
-    font-size: 0.9rem !important;  /* más pequeño en móvil */
-    flex: auto;                     /* permite que se ajusten */
-    text-align: center;             /* que no se desborde */
-    min-width: 80px;                /* opcional: ancho mínimo */
-  }
-}
-/* ===============================
-   HERO Y HEADER RESPONSIVE MÓVIL
-================================ */
-
-/* Pantallas ≤ 480px */
-@media (max-width: 480px) {
-
-  /* Header */
-  header {
-    padding: 12px 10px;       /* un poco más compacto */
-  }
-
-  header h1 {
-    font-size: 1.8rem;        /* tamaño legible */
-    margin-left: 10px;
-  }
-
-  .logo-container img {
-    width: 90px;               /* más grande que antes */
-    height: 90px;
-  }
-
-  /* Hero */
-  .hero {
-    height: 45vh;              /* un poco más alto para verse mejor */
-  }
-
-  .hero-contenido h2 {
-    font-size: 1.6rem;         /* proporcional al hero */
-  }
-
-  .hero-contenido p {
-    font-size: 0.85rem;
-  }
-}
-
-/* Tablet ≤ 768px */
-@media (max-width: 768px) {
-  .logo-container img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .hero {
-    height: 50vh;
-  }
-
-  .hero-contenido h2 {
-    font-size: 1.8rem;
-  }
-
-  .hero-contenido p {
-    font-size: 0.9rem;
-  }
-}
-/* ===============================
-   IMAGEN DE HOME - REDONDEADAS Y RESPONSIVE
-================================ */
-.inicio .intro-bloque .intro-imagen img {
-  width: 380px;        /* tamaño por defecto para desktop */
-  max-width: 100%;     /* nunca sobrepasa el contenedor */
-  height: auto;        /* mantiene proporción */
-  border-radius: 12px; /* bordes redondeados */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra opcional */
-  display: block;
-  margin: 0 auto;
-}
-
-/* Ajustes para tablet y móvil */
-@media (max-width: 768px) {
-  .inicio .intro-bloque .intro-imagen img {
-    width: 90%;         /* ocupa casi todo el ancho disponible */
-    max-width: 300px;   /* límite máximo en móvil */
-  }
-}
-/* ===============================
-   MI HISTORIA - IMÁGENES RESPONSIVE Y REDONDEADAS
-================================ */
-.imagenes-inline {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  max-width: 700px;   /* 👈 CLAVE */
-  margin: 40px auto;  /* centrado real */
-}
-
-.imagenes-inline img {
-  width: 300px;          /* tamaño por defecto */
-  max-width: 100%;
-  height: auto;
-  border-radius: 12px;   /* bordes redondeados */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* sombra opcional */
-  display: block;
-  margin: 0 auto;
-}
-
-/* Ajustes para tablet y móvil */
-@media (max-width: 768px) {
-  .imagenes-inline {
-    flex-direction: column; /* imágenes en columna */
-    gap: 15px;              /* espacio más reducido en móvil */
-    align-items: center;     /* centra las imágenes */
-  }
-
-  .imagenes-inline img {
-    width: 90%;              /* ancho adaptativo */
-    max-width: 300px;        /* límite máximo */
-  }
-}
-
-
-
-
-
