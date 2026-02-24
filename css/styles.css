@@ -957,10 +957,11 @@ footer {
 
   .intro p,
   .descripcion p {
-    font-style: normal;   /* quitar cursiva en móvil */
+    font-style: italic;   /* quitar cursiva en móvil */
     line-height: 1.6;
   }
 }
+
 
 
 
