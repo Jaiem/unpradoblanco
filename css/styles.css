@@ -164,9 +164,9 @@ main {
 .subribbon-vertical {
   display: flex;
   flex-direction: column;
-  gap: 12px;          /* menos espacio en desktop para limpieza */
+  gap: 15px;
   width: 220px;
-  padding: 15px;
+  padding: 20px;
   background-color: #f6f2ec;
   border-radius: 10px;
   position: sticky;
@@ -175,11 +175,13 @@ main {
 }
 
 .subribbon-vertical .categoria {
-  padding: 12px 18px; 
-  border-radius: 10px;
+  padding: 15px 20px;
+  background-color: #f6f2ec;
+  border: none;
+  border-radius: 12px;
   font-family: 'Playfair Display', serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #4a4a4a;
   cursor: pointer;
   transition: all 0.3s;
@@ -483,8 +485,8 @@ footer {
   .hero-contenido h2 { font-size: 1.6rem; }
   .hero-contenido p { font-size: 0.85rem; }
   .intro p, .descripcion p { line-height: 1.4; font-size: 0.95rem; margin-left: 5px;margin-right: 5px; margin-bottom: 15px;font-style: italic;}
-  .subribbon-vertical { gap: 6px;}
-  .subribbon-vertical .categoria {font-size: 0.85rem;padding: 6px 8px;}
+   .subribbon-vertical { width: 100%; flex-direction: row; flex-wrap: wrap; padding: 10px; gap: 8px; }
+  .subribbon-vertical .categoria { padding: 8px 10px; font-size: 0.9rem; }
   nav.ribbon a { padding: 6px 10px !important; font-size: 0.9rem !important; flex: auto; min-width: 80px; text-align: center; }
   .galeria-papeleria, .galeria-proceso { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
   .formulario-contacto { padding: 10px; gap: 15px; }
@@ -517,8 +519,8 @@ footer {
   .intro p, .descripcion p {line-height: 1.6;font-style: italic; margin-left: 10px;margin-right: 10px;margin-bottom: 20px;}
   .papeleria-page { flex-direction: column; }
   .subribbon-vertical, .descripcion { width: 100%; max-width: 100%; }
-  .subribbon-vertical {   width: 100%;  flex-direction: row; flex-wrap: wrap;  gap: 8px;position: relative; top: auto;padding: 10px;}
-  .subribbon-vertical .categoria {flex: 1 1 auto; font-size: 0.9rem; padding: 8px 10px; text-align: center; min-width: 80px;}
+  .subribbon-vertical { padding: 10px; flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .subribbon-vertical .categoria { padding: 8px 10px; font-size: 0.9rem; }
   nav.ribbon { justify-content: center; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
   nav.ribbon a { padding: 6px 10px !important; font-size: 0.9rem !important; flex: auto; min-width: 80px; text-align: center; }
   .hero-contenido h2 { font-size: 2.5rem; }
@@ -539,8 +541,6 @@ footer {
   .contacto-directo p { margin-bottom: 8px;font-size: 0.95rem;}
 
 }
-
-
 
 
 
