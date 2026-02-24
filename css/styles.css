@@ -369,27 +369,30 @@ footer {
   margin-bottom: 20px;
 }
 
-.contacto-directo p { margin-bottom: 20px; }
-
+.contacto-directo p {
+  margin-bottom: 10px;   
+  line-height: 1.5;     
+  font-size: 1rem;
+}
 .formulario-contacto {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 600px;
-  padding: 20px;
-  margin: 40px auto;
+  gap: 12px;              
+  max-width: 500px;       
+  padding: 15px;           
+  margin: 20px auto;       
 }
-
 .formulario-contacto input,
 .formulario-contacto textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;           
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
   color: #333;
-  transition: border-color 0.3s ease;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.08); 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formulario-contacto textarea {
@@ -401,6 +404,7 @@ footer {
 .formulario-contacto textarea:focus {
   border-color: #d6c8b6;
   outline: none;
+  box-shadow: 0 0 6px rgba(214,200,182,0.5); /* efecto elegante */
 }
 
 .formulario-contacto button {
@@ -413,8 +417,16 @@ footer {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 .formulario-contacto button:hover { background-color: #b59b82; }
+
+* =============================== FORMULARIO + CONTACTO JUNTOS ================================ */
+.contacto-page {
+  display: flex;
+  gap: 40px;              
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;         
+}
 
 /* =============================== IMÁGENES ================================ */
 .img-precios {
@@ -487,6 +499,12 @@ footer {
   .proceso h3 {line-height: 1.3; font-size: 1.2rem;}
   .intro h2 {font-size: 1.6rem; margin-bottom: 25px;}
   .proceso h3 { line-height: 1.3;font-size: 1.2rem; margin-bottom: 20px; }
+  .contacto-page { flex-direction: column; gap: 15px; align-items: center; }
+  .formulario-contacto {   max-width: 95%; padding: 10px;   gap: 10px;   margin: 0 auto; }
+  .formulario-contacto input, .formulario-contacto textarea {font-size: 0.95rem;  padding: 8px; }
+  .formulario-contacto textarea {   min-height: 120px; }
+  .formulario-contacto button {  width: 100%; padding: 10px; font-size: 1rem;}
+  .contacto-directo p {   margin-bottom: 8px;  font-size: 0.9rem; line-height: 1.4; text-align: center;}
 }
 
 /* Tablet ≤ 768px */
@@ -518,9 +536,12 @@ footer {
   .imagenes-inline { margin: 20px auto; }
   .proceso h3 {  line-height: 1.4; font-size: 1.3rem; margin-bottom: 25px;}
   .intro h2 {font-size: 1.8rem; margin-bottom: 30px;}
-  
+  .contacto-page { flex-direction: column; gap: 20px; }
+  .formulario-contacto { max-width: 100%; margin: 0 auto;}
+  .contacto-directo p { margin-bottom: 8px;font-size: 0.95rem;}
 
 }
+
 
 
 
