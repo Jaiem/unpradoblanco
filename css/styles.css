@@ -1,19 +1,4 @@
-/* ===============================
-   VARIABLES
-================================ */
-:root {
-  --color-principal: #b59b82;
-  --color-secundario: #d6c8b6;
-  --color-fondo: #fdfaf6;
-  --color-fondo-suave: #f6f2ec;
-  --color-texto: #333;
-  --color-texto-suave: #555;
-  --color-titulo: #5b4d4b;
-}
-
-/* ===============================
-   FUENTES
-================================ */
+/* =============================== FUENTES ================================ */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
 
 @font-face {
@@ -23,33 +8,35 @@
   font-style: normal;
 }
 
-/* ===============================
-   RESET
-================================ */
+/* =============================== RESET ================================ */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===============================
-   BODY
-================================ */
+/* =============================== BODY Y TIPOGRAFÍA GLOBAL ================================ */
 body {
   font-family: 'Lora', serif;
-  background-color: var(--color-fondo);
-  color: var(--color-texto);
+  background-color: #fdfaf6;
+  color: #333;
   line-height: 1.75;
+  margin: 0;
   padding: 50px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body.lightbox-activo {
   overflow: hidden;
 }
 
-/* ===============================
-   HEADER
-================================ */
+body, .intro p, .descripcion p, .hero-contenido h2, .hero-contenido p, .proceso h3 p, .subribbon-vertical .categoria {
+  text-align: center;
+  line-height: 2;
+}
+
+/* =============================== HEADER ================================ */
 header {
   background-color: #fff;
   padding: 30px 20px;
@@ -61,14 +48,19 @@ header h1 {
   font-size: 3.5rem;
   font-weight: normal;
   letter-spacing: 0.02em;
-  color: var(--color-principal);
-  margin-left: 20px;
+  color: #b59b82;
+  margin: 0 0 0 20px;
 }
 
 .logo-title-container {
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   gap: 20px;
+}
+
+.logo-container {
+  flex-shrink: 0;
 }
 
 .logo-container img {
@@ -76,28 +68,27 @@ header h1 {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid var(--color-principal);
+  border: 2px solid #b59b82;
 }
 
-/* ===============================
-   NAVEGACIÓN
-================================ */
+/* =============================== NAVEGACIÓN ================================ */
 nav.ribbon {
   display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   gap: 18px;
   margin-top: 15px;
-  flex-wrap: wrap;
 }
 
 nav.ribbon a {
   text-decoration: none;
   padding: 12px 22px;
   border-radius: 8px 8px 0 0;
-  background-color: var(--color-fondo-suave);
+  background-color: #f6f2ec;
   color: #4a4a4a;
   font-weight: 500;
-  transition: 0.3s;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  transition: all 0.3s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 nav.ribbon a:hover {
@@ -106,30 +97,175 @@ nav.ribbon a:hover {
 }
 
 nav.ribbon a.active {
-  background-color: var(--color-secundario);
+  background-color: #d6c8b6;
   color: #222;
   font-weight: 600;
 }
 
-/* ===============================
-   HERO
-================================ */
+/* =============================== MAIN ================================ */
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* =============================== INTRODUCCIÓN ================================ */
+.intro {
+  margin: 0;
+}
+
+.intro h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+  padding-left: 12px;
+  color: #5b4d4b;
+}
+
+.intro p {
+  font-size: 1.18rem;
+  color: #555;
+  font-style: italic;
+  max-width: 100%;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  line-height: 1.8;
+}
+
+/* =============================== PROCESO ================================ */
+.proceso h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 540;
+  letter-spacing: 0.08em;
+  position: relative;
+  text-align: center;
+  line-height: 2;
+}
+
+/* =============================== PAPELERÍA ================================ */
+.papeleria-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.papeleria h3 {
+  font-family: 'Playfair Display', serif;
+  margin-top: 20px;
+}
+
+/* Submenú lateral */
+.subribbon-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 220px;
+  padding: 20px;
+  background-color: #f6f2ec;
+  border-radius: 10px;
+  position: sticky;
+  top: 30px;
+  flex-shrink: 0;
+}
+
+.subribbon-vertical .categoria {
+  padding: 15px 20px;
+  background-color: #f6f2ec;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.subribbon-vertical .categoria:hover {
+  background-color: #e7dfd2;
+  color: #222;
+}
+
+.subribbon-vertical .categoria.active {
+  background-color: #d6c8b6;
+  color: #222;
+  font-weight: 580;
+}
+
+/* Descripción */
+.descripcion {
+  flex-grow: 1;
+  width: 100%;
+  max-width: calc(100% - 240px);
+  padding: 0 15px;
+  font-size: 1.15rem;
+  color: #555;
+  margin-top: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.descripcion p {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* =============================== GALERÍAS ================================ */
+.galeria-papeleria,
+.galeria-proceso {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 30px;
+}
+
+.galeria-papeleria img,
+.galeria-proceso img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.4s ease;
+}
+
+.galeria-papeleria img { height: 360px; }
+.galeria-proceso img { height: 420px; }
+
+.galeria-papeleria img:hover,
+.galeria-proceso img:hover {
+  transform: scale(1.04);
+}
+
+/* =============================== HERO GLOBAL ================================ */
 .hero {
   position: relative;
   width: 100%;
-  height: 75vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 20px;
+  height: 75vh;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
 }
+
+.hero-home { background-image: url("../img/home/CABECERA_HOME.jpg"); }
+.hero-contacto { background-image: url("../img/contacto/CABECERA_CONTACTO.jpg"); }
+.hero-invitaciones { background-image: url("../img/invitaciones/INVITACION_CABECERA.jpg"); }
+.hero-papeleria { background-image: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg"); }
+.hero-proceso { background-image: url("../img/procesoArtesanal/CABECERA_PROCESO.jpg"); }
+.hero-mi-historia { background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg"); }
 
 .hero-contenido {
   position: relative;
@@ -157,59 +293,78 @@ nav.ribbon a.active {
   font-weight: 300;
 }
 
-/* ===============================
-   INTRO
-================================ */
-.intro h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 30px;
-  color: var(--color-titulo);
-  text-align: center;
+/* =============================== LIGHTBOX ================================ */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
 }
 
-.intro p {
-  font-size: 1.18rem;
-  color: var(--color-texto-suave);
-  font-style: italic;
-  max-width: 800px;
-  margin: 10px auto 0 auto;
-  line-height: 1.8;
-  text-align: center;
-  padding: 0 20px;
-}
-
-/* ===============================
-   GALERÍAS
-================================ */
-.galeria-papeleria,
-.galeria-proceso {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.galeria-papeleria img,
-.galeria-proceso img {
-  width: 100%;
-  object-fit: cover;
+.lightbox-imagen {
+  max-width: 85vw;
+  max-height: 85vh;
+  object-fit: contain;
   border-radius: 4px;
-  transition: transform 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
 }
 
-.galeria-papeleria img { height: 360px; }
-.galeria-proceso img { height: 420px; }
-
-.galeria-papeleria img:hover,
-.galeria-proceso img:hover {
-  transform: scale(1.04);
+.lightbox-cerrar {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
 }
 
-/* ===============================
-   FORMULARIO
-================================ */
+.lightbox-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.lightbox-flecha:hover { opacity: 1; }
+.lightbox-flecha.izquierda { left: 30px; }
+.lightbox-flecha.derecha { right: 30px; }
+
+/* =============================== FOOTER ================================ */
+footer {
+  text-align: center;
+  padding: 40px 15px;
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  width: 100%;
+}
+
+/* =============================== CONTACTO ================================ */
+.contacto-directo h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.contacto-directo p { margin-bottom: 20px; }
+
 .formulario-contacto {
   display: flex;
   flex-direction: column;
@@ -227,7 +382,7 @@ nav.ribbon a.active {
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
-  color: var(--color-texto);
+  color: #333;
   transition: border-color 0.3s ease;
 }
 
@@ -238,7 +393,7 @@ nav.ribbon a.active {
 
 .formulario-contacto input:focus,
 .formulario-contacto textarea:focus {
-  border-color: var(--color-secundario);
+  border-color: #d6c8b6;
   outline: none;
 }
 
@@ -247,76 +402,100 @@ nav.ribbon a.active {
   font-size: 1.1rem;
   border: none;
   border-radius: 8px;
-  background-color: var(--color-secundario);
+  background-color: #d6c8b6;
   color: #fff;
   cursor: pointer;
-  transition: 0.3s;
+  transition: background-color 0.3s;
 }
 
-.formulario-contacto button:hover {
-  background-color: var(--color-principal);
+.formulario-contacto button:hover { background-color: #b59b82; }
+
+/* =============================== IMÁGENES ================================ */
+.img-precios {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto 0;
+  max-width: 800px;
 }
 
-/* ===============================
-   FOOTER
-================================ */
-footer {
-  text-align: center;
-  padding: 40px 15px;
-  font-size: 0.95rem;
-  color: #888;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
-  background-color: #fff;
+/* Mi historia - imágenes inline */
+.imagenes-inline {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 700px;
+  margin: 40px auto;
 }
 
-/* ===============================
-   RESPONSIVE UNIFICADO
-================================ */
-@media (max-width: 768px) {
-
-  body { padding: 15px; }
-
-  header { padding: 15px 10px; }
-
-  header h1 { font-size: 2rem; margin-left: 10px; }
-
-  .logo-container img { width: 80px; height: 80px; }
-
-  nav.ribbon { justify-content: center; gap: 10px; }
-
-  nav.ribbon a { padding: 8px 12px; font-size: 0.9rem; }
-
-  .hero { height: 50vh; }
-
-  .hero-contenido h2 { font-size: 1.8rem; }
-
-  .hero-contenido p { font-size: 0.9rem; }
-
-  .galeria-papeleria,
-  .galeria-proceso {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  }
-
-  .intro p {
-    font-style: normal;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
+.imagenes-inline img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: block;
+  margin: 0 auto;
 }
 
+/* Home - intro bloque imágenes */
+.inicio .intro-bloque .intro-imagen img {
+  width: 380px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  display: block;
+  margin: 0 auto;
+}
+
+/* =============================== RESPONSIVE ================================ */
+/* Móviles ≤ 480px */
 @media (max-width: 480px) {
-
-  .hero { height: 40vh; }
-
+  body { padding: 5px 10px; line-height: 1.4; }
+  header { padding: 12px 10px; }
+  header h1 { font-size: 1.8rem; margin-left: 10px; }
   .logo-container img { width: 90px; height: 90px; }
-
+  .hero { height: 45vh; }
   .hero-contenido h2 { font-size: 1.6rem; }
-
   .hero-contenido p { font-size: 0.85rem; }
+  .intro p { margin: 5px; font-size: 0.95rem; line-height: 1.4; }
+  .subribbon-vertical { width: 100%; flex-direction: row; flex-wrap: wrap; padding: 10px; gap: 8px; }
+  .subribbon-vertical .categoria { padding: 8px 10px; font-size: 0.9rem; }
+  nav.ribbon a { padding: 6px 10px !important; font-size: 0.9rem !important; flex: auto; min-width: 80px; text-align: center; }
+  .galeria-papeleria, .galeria-proceso { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+  .formulario-contacto { padding: 10px; gap: 15px; }
+  .formulario-contacto input, .formulario-contacto textarea { font-size: 1rem; padding: 10px; }
+  .formulario-contacto textarea { min-height: 150px; }
+  .img-precios { max-width: 85%; }
+  .imagenes-inline { flex-direction: column; gap: 15px; align-items: center; }
+  .imagenes-inline img { width: 90%; max-width: 300px; }
+}
 
-  .intro p {
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
+/* Tablet ≤ 768px */
+@media (max-width: 768px) {
+  body { padding: 15px; }
+  header { padding: 15px 10px; }
+  header h1 { font-size: 2rem; margin-left: 10px; }
+  .logo-container img { width: 80px; height: 80px; }
+  .hero { height: 50vh; }
+  .hero-contenido h2 { font-size: 1.8rem; }
+  .hero-contenido p { font-size: 0.9rem; }
+  .intro p { margin: 10px; font-size: 1rem; line-height: 1.5; font-style: normal; }
+  .papeleria-page { flex-direction: column; }
+  .subribbon-vertical, .descripcion { width: 100%; max-width: 100%; }
+  .subribbon-vertical { padding: 10px; flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .subribbon-vertical .categoria { padding: 8px 10px; font-size: 0.9rem; }
+  nav.ribbon { justify-content: center; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+  nav.ribbon a { padding: 6px 10px !important; font-size: 0.9rem !important; flex: auto; min-width: 80px; text-align: center; }
+  .hero-contenido h2 { font-size: 2.5rem; }
+  .hero-contenido p { font-size: 1rem; }
+  .intro-bloque { flex-direction: column; gap: 1-1.5rem; }
+  .intro-texto-lateral { text-align: center; margin-left: 10px; margin-right: 10px; }
+  .galeria-papeleria, .galeria-proceso { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .formulario-contacto { padding: 15px; }
+  .formulario-contacto input, .formulario-contacto textarea { font-size: 1.1rem; padding: 14px; }
+  .formulario-contacto textarea { min-height: 200px; }
+  .img-precios { max-width: 90%; }
+  .inicio .intro-bloque .intro-imagen img { width: 90%; max-width: 300px; }
 }
