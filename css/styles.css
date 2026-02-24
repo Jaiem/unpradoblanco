@@ -948,6 +948,19 @@ footer {
     max-width: 300px;        /* límite máximo */
   }
 }
+@media (max-width: 768px) {
+  body {
+    font-family: 'Lora', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .intro p,
+  .descripcion p {
+    font-style: normal;   /* quitar cursiva en móvil */
+    line-height: 1.6;
+  }
+}
 
 
 
