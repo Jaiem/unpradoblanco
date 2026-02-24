@@ -1,4 +1,25 @@
 /* ===============================
+   FUENTES
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'adelia';
+  src: url('../fonts/adelia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ===============================
+   RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
    BODY Y TIPOGRAFÍA GLOBAL
 ================================ */
 body {
@@ -6,6 +27,7 @@ body {
   background-color: #fdfaf6;
   color: #333;
   line-height: 1.75;
+  margin: 0;
   padding: 50px;
 }
 
@@ -14,6 +36,7 @@ body,
 .descripcion p,
 .hero-contenido h2,
 .hero-contenido p,
+.proceso h3 p,
 .subribbon-vertical .categoria {
   text-align: center;
   line-height: 2;
@@ -37,9 +60,12 @@ header h1 {
   font-size: 3.5rem;
   font-weight: normal;
   letter-spacing: 0.02em;
-  color: #b59b82;
+  color: #2c2c2c;
   margin: 0 0 0 20px;
+  color: #b59b82;
+
 }
+
 /* Logo + título */
 .logo-title-container {
   display: flex;
