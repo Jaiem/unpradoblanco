@@ -35,7 +35,6 @@ body,
 .descripcion p,
 .hero-contenido h2,
 .hero-contenido p,
-.proceso h3 p,
 .subribbon-vertical .categoria {
   text-align: center;
   line-height: 2;
@@ -59,15 +58,20 @@ header h1 {
   font-size: 3.5rem;
   font-weight: normal;
   letter-spacing: 0.02em;
-  margin: 0 0 0 20px;
   color: #b59b82;
+  margin: 0 0 0 20px;
 }
 
+/* Logo */
 .logo-title-container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
+}
+
+.logo-container {
+  flex-shrink: 0;
 }
 
 .logo-container img {
@@ -102,11 +106,22 @@ nav.ribbon a {
 
 nav.ribbon a:hover {
   background-color: #e7dfd2;
+  color: #222;
 }
 
 nav.ribbon a.active {
   background-color: #d6c8b6;
+  color: #222;
   font-weight: 600;
+}
+
+/* ===============================
+   MAIN
+================================ */
+main {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 /* ===============================
@@ -115,11 +130,11 @@ nav.ribbon a.active {
 .hero {
   position: relative;
   width: 100%;
+  height: 75vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 20px;
-  height: 75vh;
 }
 
 .hero::before {
@@ -129,9 +144,6 @@ nav.ribbon a.active {
   background: rgba(255, 255, 255, 0.25);
 }
 
-/* ===============================
-   HERO CONTENIDO
-================================ */
 .hero-contenido {
   position: relative;
   height: 100%;
@@ -141,7 +153,6 @@ nav.ribbon a.active {
   justify-content: center;
   align-items: center;
   color: #2e2e2e;
-  text-align: center;
 }
 
 .hero-contenido h2 {
@@ -158,9 +169,7 @@ nav.ribbon a.active {
   font-weight: 300;
 }
 
-/* ===============================
-   HERO IMÁGENES
-================================ */
+/* HERO IMÁGENES */
 .hero-home { background-image: url("../img/home/CABECERA_HOME.jpg"); }
 .hero-contacto { background-image: url("../img/contacto/CABECERA_CONTACTO.jpg"); }
 .hero-invitaciones { background-image: url("../img/invitaciones/INVITACION_CABECERA.jpg"); }
@@ -169,72 +178,91 @@ nav.ribbon a.active {
 .hero-mi-historia { background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg"); }
 
 /* ===============================
-   RESPONSIVE GLOBAL
+   GALERÍAS
 ================================ */
-@media (max-width: 768px) {
-
-  body { padding: 15px; }
-
-  header { padding: 15px 10px; }
-
-  header h1 {
-    font-size: 2rem;
-    margin-left: 10px;
-  }
-
-  .logo-container img {
-    width: 80px;
-    height: 80px;
-  }
-
-  nav.ribbon {
-    justify-content: center;
-    gap: 6px;
-    margin-top: 10px;
-  }
-
-  nav.ribbon a {
-    padding: 6px 10px;
-    font-size: 0.9rem;
-    min-width: 80px;
-  }
-
-  .hero { height: 50vh; }
-
-  .hero-contenido h2 { font-size: 1.8rem; }
-  .hero-contenido p { font-size: 0.9rem; }
-
-  .intro p {
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .imagenes-inline {
-    flex-direction: column;
-    align-items: center;
-  }
+.galeria-papeleria,
+.galeria-proceso {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
-@media (max-width: 480px) {
+.galeria-papeleria img,
+.galeria-proceso img {
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
 
-  .hero { height: 45vh; }
+.galeria-papeleria img { height: 360px; border-radius: 4px; }
+.galeria-proceso img { height: 420px; border-radius: 2px; }
 
-  header h1 { font-size: 1.8rem; }
+.galeria-papeleria img:hover,
+.galeria-proceso img:hover {
+  transform: scale(1.04);
+}
 
-  .logo-container img {
-    width: 90px;
-    height: 90px;
-  }
+/* ===============================
+   FORMULARIO
+================================ */
+.formulario-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  padding: 20px;
+  margin: 40px auto;
+}
 
-  .hero-contenido h2 { font-size: 1.6rem; }
-  .hero-contenido p { font-size: 0.85rem; }
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
 
-  .intro p {
-    margin-left: 5px;
-    margin-right: 5px;
-    font-size: 0.95rem;
-    line-height: 1.4;
-  }
+.formulario-contacto textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #d6c8b6;
+  outline: none;
+}
+
+.formulario-contacto button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #d6c8b6;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #b59b82;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 40px 15px;
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  width: 100%;
 }
