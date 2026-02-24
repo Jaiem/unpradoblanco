@@ -478,7 +478,8 @@ footer {
   .imagenes-inline { flex-direction: column; gap: 15px; align-items: center;margin: 30px auto; }
   .imagenes-inline img { width: 90%; max-width: 300px; }
   .inicio .intro-bloque { margin: 1.5rem auto; }
-
+  .proceso h3 {line-height: 1.3; font-size: 1.2rem; 
+  }
 }
 
 /* Tablet ≤ 768px */
@@ -508,6 +509,9 @@ footer {
   .img-precios { max-width: 90%; }
   .inicio .intro-bloque .intro-imagen img { width: 90%; max-width: 300px; margin: 2rem auto; }
   .imagenes-inline { margin: 20px auto; }
+  .proceso h3 {  line-height: 1.4; font-size: 1.3rem;
+  }
 
 }
+
 
