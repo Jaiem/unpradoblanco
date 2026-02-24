@@ -110,7 +110,7 @@ header h1 {
 .inicio .intro-texto-lateral {
   max-width: 500px;   /* un poco más amplio */
   margin: 0;          /* elimina márgenes globales */
-  text-align: left;
+  text-align: center;
 }
 /* ===============================
    NAVEGACIÓN
@@ -948,6 +948,7 @@ footer {
     max-width: 300px;        /* límite máximo */
   }
 }
+
 
 
 
