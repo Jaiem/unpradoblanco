@@ -40,11 +40,13 @@
 <footer>
   <p>© 2026 Un Prado Blanco</p>
 </footer>
-
+  
+<script src="https://unpkg.com/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
 <script>
 /* ==========================
    LIGHTBOX SIMPLE
 ========================== */
+let panzoomInstance; // instancia de zoom
 const imgPrecios = document.querySelector('.img-precios');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.querySelector('.lightbox-imagen');
@@ -68,4 +70,5 @@ lightbox.addEventListener('click', e => {
 
 </body>
 </html>
+
 
