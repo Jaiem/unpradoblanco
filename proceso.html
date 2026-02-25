@@ -192,18 +192,27 @@ document.getElementById('lightbox').addEventListener('click', e => {
 });
 
 /* ==========================
-   GALERÍA PROCESO
+   GALERÍA PROCESO (GLOBAL)
 ========================== */
-document.querySelectorAll('.galeria-proceso').forEach(galeria => {
-  const imgs = Array.from(galeria.querySelectorAll('img')).map(img => img.src);
 
-  galeria.querySelectorAll('img').forEach(imgEl => {
-    imgEl.addEventListener('click', () => abrirLightbox(imgEl.src, imgs));
+// Seleccionamos TODAS las imágenes de todas las galerías
+const todasLasImagenes = Array.from(
+  document.querySelectorAll('.galeria-proceso img')
+);
+
+// Creamos un array solo con los src
+const grupoGlobal = todasLasImagenes.map(img => img.src);
+
+// Asignamos evento a cada imagen
+todasLasImagenes.forEach(imgEl => {
+  imgEl.addEventListener('click', () => {
+    abrirLightbox(imgEl.src, grupoGlobal);
   });
 });
 </script>
 </body>
 </html>
+
 
 
 
