@@ -68,9 +68,12 @@ imgPrecios.addEventListener('click', () => {
 });
 
 // Zoom con rueda de ratón sobre el lightbox
-lightboxImg.addEventListener('wheel', e => {
-  e.preventDefault(); // evita que la página haga scroll
-  panzoomInstance.zoomWithWheel(e);
+lightboxCont.addEventListener('wheel', e => {
+  // Solo hacer zoom si Ctrl está pulsado
+  if (e.ctrlKey) {
+    e.preventDefault(); // evita que el navegador haga zoom de página
+    panzoomInstance.zoomWithWheel(e);
+  }
 });
 
 // Cerrar lightbox con X
@@ -90,6 +93,7 @@ lightbox.addEventListener('click', e => {
 
 </body>
 </html>
+
 
 
 
