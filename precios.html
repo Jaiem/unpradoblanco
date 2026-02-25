@@ -55,6 +55,15 @@ const cerrar = document.querySelector('.lightbox-cerrar');
 imgPrecios.addEventListener('click', () => {
   lightbox.style.display = 'flex';
   lightboxImg.src = imgPrecios.src;
+
+  // Inicializar zoom
+  if (panzoomInstance) panzoomInstance.destroy();
+  panzoomInstance = Panzoom(lightboxImg, {
+    maxScale: 3,
+    minScale: 1,
+    contain: 'outside',
+    cursor: 'grab'
+  });
 });
 
 cerrar.addEventListener('click', () => {
@@ -70,5 +79,6 @@ lightbox.addEventListener('click', e => {
 
 </body>
 </html>
+
 
 
