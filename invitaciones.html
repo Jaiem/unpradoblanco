@@ -142,7 +142,23 @@ function anteriorImagen() {
   indiceActual = (indiceActual - 1 + grupoImagenes.length) % grupoImagenes.length;
   document.querySelector('.lightbox-imagen').src = grupoImagenes[indiceActual];
 }
+    
+document.addEventListener('keydown', function(e) {
+  const lightbox = document.getElementById('lightbox');
 
+  if (lightbox.style.display === 'flex') {
+    if (e.key === 'ArrowRight') {
+      siguienteImagen();
+    }
+    if (e.key === 'ArrowLeft') {
+      anteriorImagen();
+    }
+    if (e.key === 'Escape') {
+      lightbox.style.display = 'none';
+      document.body.classList.remove('lightbox-activo');
+    }
+  }
+});
 /* ==========================
    EVENTOS LIGHTBOX
 ========================== */
@@ -171,16 +187,21 @@ document.getElementById('lightbox').addEventListener('click', e => {
 /* ==========================
    GALERÍA PROCESO
 ========================== */
-document.querySelectorAll('.galeria-proceso').forEach(galeria => {
-  const imgs = Array.from(galeria.querySelectorAll('img')).map(img => img.src);
+const todasLasImagenes = Array.from(
+  document.querySelectorAll('.galeria-proceso img')
+);
 
-  galeria.querySelectorAll('img').forEach(imgEl => {
-    imgEl.addEventListener('click', () => abrirLightbox(imgEl.src, imgs));
+const grupoGlobal = todasLasImagenes.map(img => img.src);
+
+todasLasImagenes.forEach(imgEl => {
+  imgEl.addEventListener('click', () => {
+    abrirLightbox(imgEl.src, grupoGlobal);
   });
 });
 </script>
 </body>
 </html>
+
 
 
 
