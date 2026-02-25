@@ -55,7 +55,6 @@ imgPrecios.addEventListener('click', () => {
   lightbox.style.display = 'flex';
   lightboxImg.src = imgPrecios.src;
 
-  // Inicializar Panzoom
   if (panzoomInstance) panzoomInstance.destroy();
   panzoomInstance = Panzoom(lightboxImg, {
     maxScale: 3,
@@ -65,12 +64,12 @@ imgPrecios.addEventListener('click', () => {
   });
 
   // Zoom con Ctrl + rueda
-  lightboxCont.onwheel = e => {
+  lightboxCont.addEventListener('wheel', e => {
     if (e.ctrlKey) {
       e.preventDefault();
       panzoomInstance.zoomWithWheel(e);
     }
-  };
+  }, { passive: false });
 });
 
 // Cerrar lightbox
@@ -79,7 +78,7 @@ cerrar.addEventListener('click', () => {
   if (panzoomInstance) panzoomInstance.reset();
 });
 
-// Cerrar al clicar fuera de la imagen
+// Cerrar al clicar fuera
 lightbox.addEventListener('click', e => {
   if (e.target === lightbox) {
     lightbox.style.display = 'none';
@@ -90,6 +89,7 @@ lightbox.addEventListener('click', e => {
 
 </body>
 </html>
+
 
 
 
