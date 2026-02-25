@@ -44,14 +44,15 @@
 <script src="https://unpkg.com/@panzoom/panzoom@9.4.0/dist/panzoom.min.js"></script>
 <script>
 /* ==========================
-   LIGHTBOX SIMPLE
-========================== */
+   LIGHTBOX SIMPLE CON ZOOM
+========================= */
 let panzoomInstance; // instancia de zoom
 const imgPrecios = document.querySelector('.img-precios');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.querySelector('.lightbox-imagen');
 const cerrar = document.querySelector('.lightbox-cerrar');
 
+// Abrir lightbox y activar Panzoom
 imgPrecios.addEventListener('click', () => {
   lightbox.style.display = 'flex';
   lightboxImg.src = imgPrecios.src;
@@ -64,35 +65,32 @@ imgPrecios.addEventListener('click', () => {
     contain: 'outside',
     cursor: 'grab'
   });
-
-// Dentro de tu imgPrecios.addEventListener
-if (panzoomInstance) panzoomInstance.destroy();
-panzoomInstance = Panzoom(lightboxImg, {
-  maxScale: 3,
-  minScale: 1,
-  contain: 'outside',
-  cursor: 'grab'
 });
 
-// Zoom con rueda de ratón
-lightboxImg.parentElement.addEventListener('wheel', panzoomInstance.zoomWithWheel);
-
-  
+// Zoom con rueda de ratón sobre el lightbox
+lightboxImg.addEventListener('wheel', e => {
+  e.preventDefault(); // evita que la página haga scroll
+  panzoomInstance.zoomWithWheel(e);
 });
 
+// Cerrar lightbox con X
 cerrar.addEventListener('click', () => {
   lightbox.style.display = 'none';
+  if (panzoomInstance) panzoomInstance.reset();
 });
 
+// Cerrar lightbox clicando fuera de la imagen
 lightbox.addEventListener('click', e => {
   if (e.target === lightbox) {
     lightbox.style.display = 'none';
+    if (panzoomInstance) panzoomInstance.reset();
   }
 });
 </script>
 
 </body>
 </html>
+
 
 
 
