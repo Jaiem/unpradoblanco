@@ -277,7 +277,32 @@ function anteriorImagen() {
   document.querySelector('.lightbox-imagen').src =
     grupoImagenes[indiceActual];
 }
+/* ==========================
+   NAVEGACIÓN CON TECLADO
+========================== */
 
+document.addEventListener('keydown', function(e) {
+
+  const lightbox = document.getElementById('lightbox');
+  
+  // Solo funciona si el lightbox está visible
+  if (lightbox.style.display === 'flex') {
+    
+    if (e.key === 'ArrowRight') {
+      siguienteImagen();
+    }
+    
+    if (e.key === 'ArrowLeft') {
+      anteriorImagen();
+    }
+
+    if (e.key === 'Escape') {
+      lightbox.style.display = 'none';
+      document.body.classList.remove('lightbox-activo');
+    }
+
+  }
+});
 /* ==========================
    EVENTOS LIGHTBOX
 ========================== */
@@ -313,6 +338,7 @@ document.getElementById('lightbox')
 </script>
 
 </html>
+
 
 
 
