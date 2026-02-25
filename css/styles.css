@@ -53,6 +53,7 @@ header h1 {
 }
 
 .logo-title-container {
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 20px;
@@ -546,8 +547,6 @@ footer {
   .contacto-directo p { margin-bottom: 8px;font-size: 0.95rem;}
 
 }
-
-
 
 
 
