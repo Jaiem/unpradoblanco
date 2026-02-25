@@ -64,6 +64,20 @@ imgPrecios.addEventListener('click', () => {
     contain: 'outside',
     cursor: 'grab'
   });
+
+// Dentro de tu imgPrecios.addEventListener
+if (panzoomInstance) panzoomInstance.destroy();
+panzoomInstance = Panzoom(lightboxImg, {
+  maxScale: 3,
+  minScale: 1,
+  contain: 'outside',
+  cursor: 'grab'
+});
+
+// Zoom con rueda de ratón
+lightboxImg.parentElement.addEventListener('wheel', panzoomInstance.zoomWithWheel);
+
+  
 });
 
 cerrar.addEventListener('click', () => {
@@ -79,6 +93,7 @@ lightbox.addEventListener('click', e => {
 
 </body>
 </html>
+
 
 
 
