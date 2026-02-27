@@ -277,6 +277,7 @@ main {
 .hero-papeleria { background-image: url("../img/PapeleriaBoda/Imagen-cabecera -papeleria.jpg"); }
 .hero-proceso { background-image: url("../img/procesoArtesanal/CABECERA_PROCESO.jpg"); }
 .hero-mi-historia { background-image: url("../img/miHistoria/CABECERA_mi_historia.jpg"); }
+.hero-precios { background-image: url("../img/precios/cabecera_precios.jpg"); }
 
 .hero-contenido {
   position: relative;
@@ -546,6 +547,7 @@ footer {
   .contacto-directo p { margin-bottom: 8px;font-size: 0.95rem;}
 
 }
+
 
 
 
