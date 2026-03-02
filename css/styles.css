@@ -424,7 +424,9 @@ footer {
   transition: background-color 0.3s;
 }
 .formulario-contacto button:hover { background-color: #b59b82; }
-
+#miFormulario:valid button {
+  background-color: #b59b82;
+}
 * =============================== FORMULARIO + CONTACTO JUNTOS ================================ */
 .contacto-page {
   display: flex;
@@ -545,6 +547,7 @@ footer {
   .contacto-directo p { margin-bottom: 8px;font-size: 0.95rem;}
 
 }
+
 
 
 
